@@ -3,3 +3,79 @@
     padding: 0;
     outline: 0;
 }
+
+body{
+    background-color: #252525;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #7300dfd5;
+    gap: 10%;
+}
+
+.flex-container > div {
+    background-color: #c4439d;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(60, 0, 83, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.navbar{
+    padding-bottom: 3rem;
+}
+
+.nav-list{
+    background: #df7699;
+    box-shadow: 0px 0px 10px gray;
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:first-child{
+    margin-right: auto;
+}
