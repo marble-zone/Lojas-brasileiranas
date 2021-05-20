@@ -51,7 +51,7 @@ a {
 
 #subbtt:hover {
     background: linear-gradient(to left, rgb(185, 145, 233), rgb(219, 198, 245));
-    
+    cursor: pointer;
 }
 
 #linkcad {
