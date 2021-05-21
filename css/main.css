@@ -1,0 +1,73 @@
+body {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 120px 50px auto 200px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 120px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: rgb(255, 148, 228);
+}
+
+nav {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 50px;
+    background-color: rgb(229, 123, 255);
+}
+
+aside {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: rgb(190, 120, 255);
+}
+
+main {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: rgb(198, 128, 255);
+}
+
+object {
+    width: 100%;
+    height: 900px;
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: rgb(255, 148, 228);
+}
+
+#divheader {
+    display: flex;
+    margin-left: 20px;
+}
+
+#title {
+    color: rgb(171, 58, 236);
+    font-size: 40px;
+}
+
+#fixed {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 170px;
+}
