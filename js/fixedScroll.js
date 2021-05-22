@@ -1,5 +1,5 @@
 document.addEventListener('scroll', function AtualizarHeight(params) {
-    let srllPos = window.scrollY*0.1;
+    let srllPos = window.scrollY*0.2;
     let divfixed = document.getElementById("fixed");
     let header = document.getElementsByTagName("header")[0];
     let title = document.getElementById("title");
