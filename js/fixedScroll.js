@@ -12,17 +12,21 @@ document.addEventListener('scroll', function AtualizarHeight(params) {
         AtualizarHeight.header = header.offsetHeight;
         AtualizarHeight.divheader = divheader.offsetHeight;
         AtualizarHeight.nav = nav.offsetHeight;
-        AtualizarHeight.title = parseInt(window.getComputedStyle(title, null).getPropertyValue('font-size'));
         AtualizarHeight.iconsheader = parseInt(window.getComputedStyle(iconsheader, null).getPropertyValue('margin-top'));
-            
+        AtualizarHeight.title = []
+        AtualizarHeight.title[0] = parseInt(window.getComputedStyle(title, null).getPropertyValue('font-size'));
+        AtualizarHeight.title[1] = parseInt(window.getComputedStyle(title, null).getPropertyValue('border-top-width'));
+        AtualizarHeight.title[2] = parseInt(window.getComputedStyle(title, null).getPropertyValue('border-bottom-width'));
     }
 
     if (srllPos < 40){
         divfixed.style.setProperty('height', `${AtualizarHeight.fixed - srllPos}px`);
         header.style.setProperty('height', `${AtualizarHeight.header - srllPos}px`);
         nav.style.setProperty('height', `${AtualizarHeight.nav - (srllPos*0.3)}px`);
-        title.style.setProperty('font-size', `${AtualizarHeight.title - (srllPos*0.3)}px`);
-        divheader.style.setProperty('height', `${AtualizarHeight.divheader - srllPos}px`);
+        divheader.style.setProperty('height', `${AtualizarHeight.divheader - (srllPos*0.9)}px`);
         iconsheader.style.setProperty('margin-top', `${AtualizarHeight.iconsheader - (srllPos*0.4)}px`)
+        title.style.setProperty('font-size', `${AtualizarHeight.title[0] - (srllPos * 0.3)}px`);
+        title.style.setProperty('border-top-width', `${AtualizarHeight.title[1] - (srllPos * 0.0003)}px`);
+        title.style.setProperty('border-bottom-width', `${AtualizarHeight.title[2] - (srllPos * 0.0003)}px`);
     }
 })

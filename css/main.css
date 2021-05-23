@@ -71,6 +71,19 @@ footer {
 #title {
     color: rgb(171, 58, 236);
     font-size: 40px;
+    margin-top: 0.52em;
+    border-top: solid;
+    border-bottom: solid;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-color: rgb(186, 84, 245);
+    border-radius: 6px 4px 6px 4px;
+    padding-bottom: 9px;
+    padding-top: 2px;
+    background: -webkit-linear-gradient(rgb(116, 66, 255), rgb(206, 58, 236));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #fixed {
