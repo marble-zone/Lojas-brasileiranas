@@ -56,7 +56,16 @@ footer {
 
 #divheader {
     display: flex;
+    flex-direction: row;
+    gap: 55%;
     margin-left: 20px;
+}
+
+#diviconsheader {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
 }
 
 #title {
@@ -91,4 +100,19 @@ footer {
     border-color: rgb(212, 169, 253);
     background-color: rgb(198, 83, 255);
     cursor: pointer;
+}
+
+.iconheader {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.iconheader:hover {
+    opacity: 1;
+}
+
+.iconheader>img {
+    width: 60px;
+    height: 60px;
 }

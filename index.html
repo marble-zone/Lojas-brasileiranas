@@ -17,6 +17,23 @@
         <header>
             <div id="divheader">
                 <h1 id="title"> Lojas Brasileiranas </h1>
+                <div id="diviconsheader">
+                    <a href="#home"></a>
+                        <option class="iconheader" value="home" onclick="changeContent(this.value)">
+                            <img src="images/icon-shop.png">
+                        </option>
+                    </a>
+                    <a href="#pedidos">
+                        <option class="iconheader" value="user" onclick="changeContent(this.value)"> 
+                            <img src="images/icon-user.png"> 
+                        </option>
+                    </a>
+                    <a href="#shooping-cart">
+                        <option class="iconheader" value="cart" onclick="changeContent(this.value)"> 
+                            <img src="images/icon-shopping-cart.png"> 
+                        </option>
+                    </a>
+                </div>
             </div>
         </header>
         <nav>
@@ -33,7 +50,7 @@
 
     </footer>
     <div id="divBkUpbtt">
-        <button onclick="backUp()" id="bkUpbtt"> ^ </button>
+        <button onclick="backUp()" id="bkUpbtt"> &#5585; </button>
     </div>
 </body>
 <script type="text/javascript" src="js/fixedScroll.js"> </script>
