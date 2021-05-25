@@ -2,7 +2,7 @@ document.addEventListener('scroll', function AtualizarHeight(params) {
     let srllPos = window.scrollY*0.2;
     let divfixed = document.getElementById("fixed");
     let header = document.getElementsByTagName("header")[0];
-    let iconsheader = document.getElementById("diviconsheader");
+    let iconsheader = document.getElementsByTagName("nav")[0];
     let title = document.getElementById("title");
     let divheader = document.getElementById("divheader");
     let nav = document.getElementsByTagName("nav")[0];
