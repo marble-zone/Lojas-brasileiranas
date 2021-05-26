@@ -1,4 +1,4 @@
-let urlBase = "../images/products/"
+let urlBase = "images/products/"
 
 let produtos = [{
     "nome": "Ovo",
