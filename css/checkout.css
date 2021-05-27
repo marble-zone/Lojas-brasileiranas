@@ -1,23 +1,22 @@
 :root {
     --purpleBlue: #877aff;
-  }
-  
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #container {
-  width: 100%;
-  height: 100%;
-  background-color:  rgb(198, 128, 255);  
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(198, 128, 255);
+    overflow: hidden;
 }
 
-#cart-table{
+#cart-table {
     width: 85%;
     margin: 80px auto 0 auto;
     border-spacing: 0px;
@@ -26,7 +25,7 @@
     border-radius: 10px 10px 0 0;
 }
 
-#cart-table th{
+#cart-table th {
     height: 70px;
     background-color: var(--purpleBlue);
     color: white;
@@ -34,23 +33,27 @@
     font-size: 1.4em;
 }
 
-#cart-table th:nth-child(1){
+#cart-table th:nth-child(1) {
     width: 5%;
 }
-#cart-table th:nth-child(2){
+
+#cart-table th:nth-child(2) {
     width: 45%;
 }
-#cart-table th:nth-child(3){
+
+#cart-table th:nth-child(3) {
     width: 10%;
 }
-#cart-table th:nth-child(4){
+
+#cart-table th:nth-child(4) {
     width: 25%;
 }
-#cart-table th:nth-child(5){
+
+#cart-table th:nth-child(5) {
     width: 15%;
 }
 
-#cart-table td{
+#cart-table td {
     height: 100px;
     color: white;
     font-weight: bold;
@@ -58,17 +61,32 @@
     text-align: center;
 }
 
-#cart-table tr{
+#cart-table tr {
     border-bottom: 1px solid var(--purpleBlue);
 }
 
-
-#cart-table tr:nth-of-type(even){
+#cart-table tr:nth-of-type(even) {
     background-color: rgb(184, 119, 236);
 }
 
+.product {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    gap: 23.5%;
+}
 
-.btn-excluirItem{
+.imgproduct {
+    width: 80px;
+    height: 80px;
+}
+
+.textproduct {
+    text-align: center;
+    padding-top: 25px;
+}
+
+td > button {
     margin: 0 auto 0 auto;
     display: block;
     width: 40px;
@@ -81,9 +99,13 @@
     cursor: pointer;
 }
 
-.btn-excluirItem:hover{
+td > button:hover {
     background-color: white;
     background-clip: border-box;
     color: var(--purpleBlue);
     border: 3px solid var(--purpleBlue);
+}
+
+.quantnumber {
+    font-size: x-large;
 }

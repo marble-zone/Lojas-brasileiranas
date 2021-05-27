@@ -1,47 +1,74 @@
 <head>
   <link rel="stylesheet" href="css/checkout.css" />
 </head>
-<body>
-  <div id="container">
-    <table id="cart-table">
-      <thead>
-        <th></th>
-        <th>Produto</th>
-        <th>Preço</th>
-        <th>Qtd.</th>
-        <th>Total</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td><button class="btn-excluirItem">X</button></td>
-          <td>aaa</td>
-          <td>bbb</td>
-          <td>50</td>
-          <td>aaa</td>
-        </tr>
-        <tr>
-          <td><button class="btn-excluirItem">X</button></td>
-          <td>ccc</td>
-          <td>Smith</td>
-          <td>50</td>
-          <td>aaa</td>
-        </tr>
-        <tr>
-          <td><button class="btn-excluirItem">X</button></td>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-          <td>aaa</td>
-        </tr>
-        <tr>
-          <td><button class="btn-excluirItem">X</button></td>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-          <td>aaa</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <script type="text/javascript" src="js/deleteRow.js"> </script>
-</body>
+<div id="container">
+  <table id="cart-table">
+    <thead>
+      <th></th>
+      <th>Produto</th>
+      <th>Preço</th>
+      <th>Qtd.</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class="btn-excluirItem">X</button></td>
+        <td class="product">
+          <img class="imgproduct" src="">
+          <p class="textproduct">  </p>
+        </td>
+        <td class="price"></td>
+        <td class="quant">
+          <button class="plusbtt">+</button>
+          <p class="quantnumber">1</p>
+          <button class="minusbtt">-</button>
+        </td>
+        <td class="total"></td>
+      </tr>
+      <tr>
+        <td><button class="btn-excluirItem">X</button></td>
+        <td class="product">
+          <img class="imgproduct" src="">
+          <p class="textproduct"> </p>
+        </td>
+        <td class="price"></td>
+        <td class="quant">
+          <button class="plusbtt">+</button>
+          <p class="quantnumber">1</p>
+          <button class="minusbtt">-</button>
+        </td>
+        <td class="total"></td>
+      </tr>
+      <tr>
+        <td><button class="btn-excluirItem">X</button></td>
+        <td class="product">
+          <img class="imgproduct" src="">
+          <p class="textproduct"> </p>
+        </td>
+        <td class="price"></td>
+        <td class="quant">
+          <button class="plusbtt">+</button>
+          <p class="quantnumber">1</p>
+          <button class="minusbtt">-</button>
+        </td>
+        <td class="total"></td>
+      </tr>
+      <!--<tr>
+        <td><button class="btn-excluirItem">X</button></td>
+        <td class="product">
+          <img class="imgproduct" src="">
+          <p class="textproduct"> </p>
+        </td>
+        <td class="price"></td>
+        <td class="quant">
+          <button class="plusbtt">+</button>
+          <p class="quantnumber">1</p>
+          <button class="minusbtt">-</button>
+        </td>
+        <td class="total"></td>
+      </tr>-->
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript" src="js/deleteRow.js"> </script>
+<script type="text/javascript" src="js/plusMinusQuant.js"> </script>
