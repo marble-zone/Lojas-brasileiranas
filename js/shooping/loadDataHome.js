@@ -1,4 +1,4 @@
-var dinheiro = new Intl.NumberFormat('pt-BR', {
+let dinheiro = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
 
