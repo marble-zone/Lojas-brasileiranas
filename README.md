@@ -1,5 +1,8 @@
 # Lojas-brasileiranas🛒:
-Um site de vendas para a disciplina de "Desenvolvimento de aplicações para a internet".
+Um site de vendas para a disciplina de "Desenvolvimento de aplicações para a internet". \
+
+Para conferir o desenvolvimento em tempo real do projeto acessar:  \
+https://marble-zone.github.io/Lojas-brasileiranas/
 
 
 # Especificações do Trabalho🔎:
@@ -10,3 +13,5 @@ As especificações e instruções detalhadas do trabalho estão disponíveis no
 -Gabriel Prado Branco Araujo \
 -Lucas Gonçalves Ferreira \
 -Vinícius Pelegrineli Bombarda 
+
+
