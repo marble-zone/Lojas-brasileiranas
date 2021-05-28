@@ -1,3 +1,12 @@
+let dinheiro = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+
+    // These options are needed to round to whole numbers if that's what you want.
+    minimumFractionDigits: 2, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+    maximumFractionDigits: 2, // (causes 2500.99 to be printed as $2,501)
+});
+
 window.addEventListener('load', function init(params) {
     if (sessionStorage['products']){
         let produtos = JSON.parse(sessionStorage.getItem('products'));
@@ -29,10 +38,10 @@ window.addEventListener('load', function init(params) {
             //excluir.classList.add("btn-excluirItem");
 
             // add listeners
-            plus.addEventListener('click', (event) => increaseQaunt(event));
-            minus.addEventListener('click', (event) => decreaseQaunt(event));
+            plus.addEventListener('click', (event) => increaseQuant(event));
+            minus.addEventListener('click', (event) => decreaseQuant(event));
 
-            td[4].addEventListener('click', (event) => calcularTotal(event));
+            //quant.addEventListener('change', (event) => calcularTotal(event));
 
             // appends
             for (let index = 0; index < td.length; index++)
@@ -47,7 +56,6 @@ window.addEventListener('load', function init(params) {
             td[3].appendChild(quant);
             td[3].appendChild(minus);
 
-            quant.innerHTML = "1";
             plus.innerHTML = "+";
             minus.innerHTML = "-";
 
@@ -56,8 +64,9 @@ window.addEventListener('load', function init(params) {
             // add produto
             img.src = `${(produtos[i])[0]}`;
             name.innerHTML = `${(produtos[i])[1]}`;
-            td[2].innerHTML = (produtos[i])[2];
-            td[4].innerHTML = (produtos[i])[2];
+            td[2].innerHTML = `${dinheiro.format((produtos[i])[2])}`;
+            quant.innerHTML = `${(produtos[i])[3]}`;
+            td[4].innerHTML = `${dinheiro.format((produtos[i])[4])}`;
         }
     }
 })

@@ -16,14 +16,18 @@ function saveProduct(event) {
     dados_produto.push((div[1].src).substring((div[1].src).indexOf("i")));
     dados_produto.push(div[3].textContent);
     let produtos = [];
-    if (sessionStorage.getItem('products') != null){
+    if (sessionStorage['products']){
         produtos = JSON.parse(sessionStorage.getItem('products'));
         if (!_VerificaCarrinho(produtos, dados_produto)){
             alert("!! ERRO !!\n\nEste produto já está adicionado no carrinho.");
             return;
         }
     }
-    dados_produto.push(div[5].textContent);
+    let convertido = (div[5].textContent).replace(/,/g, ".");
+    let price = parseFloat(convertido.replace(/R\$/g, ""));
+    dados_produto.push(price);
+    dados_produto.push(1);
+    dados_produto.push(price);
     produtos.push(dados_produto);
     sessionStorage.setItem('products', JSON.stringify(produtos));
     alert("Produto adicionado no carrinho !!");
