@@ -13,7 +13,7 @@ function saveProduct(event) {
     let div = ((button.parentNode).parentNode).childNodes;
     // image 1, name 3, price 5
     let dados_produto = [];
-    dados_produto.push((div[1].src).substring((div[1].src).indexOf("i")));
+    dados_produto.push((div[1].src).substring((div[1].src).indexOf("images")));
     dados_produto.push(div[3].textContent);
     let produtos = [];
     if (sessionStorage['products']){
