@@ -17,7 +17,7 @@ function saveProduct(event) {
     if (sessionStorage['products']){
         produtos = JSON.parse(sessionStorage.getItem('products'));
         if (!_VerificaCarrinho(produtos, dados_produto)){
-            alert("!! ERRO !!\n\nEste produto já está adicionado no carrinho.");
+            alert("!! ERRO !!\n\nEste produto já está adicionado no carrinho.\n\nCaso este não seja o erro, recarregue a página e tente novamente.");
             return;
         }
     }
