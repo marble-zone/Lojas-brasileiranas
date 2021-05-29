@@ -34,12 +34,13 @@ window.addEventListener('load', function init(params) {
             plus.classList.add("plusbtt");
             let minus = document.createElement("button");
             minus.classList.add("minusbtt");
-            //let excluir = document.createElement("button");
-            //excluir.classList.add("btn-excluirItem");
+            let excluir = document.createElement("button");
+            excluir.classList.add("btn-excluirItem");
 
             // add listeners
             plus.addEventListener('click', (event) => increaseQuant(event));
             minus.addEventListener('click', (event) => decreaseQuant(event));
+            excluir.addEventListener('click', (event) => deletarLinha(event));
 
             //quant.addEventListener('change', (event) => calcularTotal(event));
 
@@ -47,7 +48,7 @@ window.addEventListener('load', function init(params) {
             for (let index = 0; index < td.length; index++)
                 tr.appendChild(td[index]);
 
-            //td[0].appendChild(excluir);
+            td[0].appendChild(excluir);
 
             td[1].appendChild(img);
             td[1].appendChild(name);
@@ -58,6 +59,7 @@ window.addEventListener('load', function init(params) {
 
             plus.innerHTML = "+";
             minus.innerHTML = "-";
+            excluir.innerHTML = "X";
 
             document.getElementsByTagName("tbody")[0].appendChild(tr);
 
