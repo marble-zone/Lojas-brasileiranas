@@ -1,17 +1,27 @@
 let urlBase = "images/products/"
-
+/* Categorias
+    C: cosméticos
+    A: alimentos e bebidas
+    M: mobília
+    E: eletrodonesticos
+    I: informática
+    R: roupas
+*/
 let produtos = [{
     "nome": "Ovo",
     "preco": 2,
-    "img": `${urlBase}ovo.png`
+    "img": `${urlBase}ovo.png`,
+    "cat": 'A'
 },
 {
     "nome": "Boné",
     "preco": 19.5,
-    "img": `${urlBase}bone.png`
+    "img": `${urlBase}bone.png`,
+    "cat": 'R'
 },
 {
     "nome": "Cama",
     "preco": 199.99,
-    "img": `${urlBase}cama.png`
+    "img": `${urlBase}cama.png`,
+    "cat": 'M'
 }];
