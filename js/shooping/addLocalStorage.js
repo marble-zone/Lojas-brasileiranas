@@ -1,5 +1,3 @@
-let cartbtts = document.querySelectorAll(".addCartbtt");
-
 function _VerificaCarrinho(carrinho, produto) {
     let tam = carrinho.length;
     for (let i = 0; i < tam; i++)
@@ -11,10 +9,10 @@ function _VerificaCarrinho(carrinho, produto) {
 function saveProduct(event) {
     let button = event.target;
     let div = ((button.parentNode).parentNode).childNodes;
-    // image 1, name 3, price 5
+    // image 0, name 1, price 2
     let dados_produto = [];
-    dados_produto.push((div[1].src).substring((div[1].src).indexOf("images")));
-    dados_produto.push(div[3].textContent);
+    dados_produto.push((div[0].src).substring((div[0].src).indexOf("images")));
+    dados_produto.push(div[1].textContent);
     let produtos = [];
     if (sessionStorage['products']){
         produtos = JSON.parse(sessionStorage.getItem('products'));
@@ -23,7 +21,7 @@ function saveProduct(event) {
             return;
         }
     }
-    let convertido = (div[5].textContent).replace(/,/g, ".");
+    let convertido = (div[2].textContent).replace(/,/g, ".");
     let price = parseFloat(convertido.replace(/R\$/g, ""));
     dados_produto.push(price);
     dados_produto.push(1);
@@ -34,6 +32,3 @@ function saveProduct(event) {
     //button.disabled = true;
     //button.innerHTML = "Added to Cart";
 }
-
-cartbtts.forEach((btt) =>
-    btt.addEventListener('click', (event) => saveProduct(event)));
