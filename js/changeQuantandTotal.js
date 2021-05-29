@@ -14,7 +14,7 @@ function increaseQuant(event) {
     let index = Array.prototype.indexOf.call(tbody.children, tr);
     carrinho = JSON.parse(sessionStorage.getItem('products'));
     number = (carrinho[index])[3];
-    if (number < 20){
+    if (number < 99){
         number++;
         p = (button.parentNode).childNodes[1];
         p.innerHTML = `${number}`;
