@@ -20,4 +20,8 @@ function deletarLinha(event) {
    carrinho.splice(index, 1);
    row.remove();
    sessionStorage.setItem('products', JSON.stringify(carrinho));
+   if (!carrinho.length){
+      const util = new UTIL();
+      util.carrinhoVazio();
+   }
 }

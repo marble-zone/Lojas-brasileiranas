@@ -1,7 +1,41 @@
+/*function linhaSomaTotal(item) {
+    // HTML
+    // linha 1
+    let tr = document.createElement("tr");
+    document.getElementsByTagName("tbody")[0].appendChild(tr);
+    tr.appendChild(document.createElement("td"));
+
+    // linha 2
+    let td = [];
+    td[0] = document.createElement("td");
+    let nome = document.createElement("p");
+    nome.classList.add("textproduct");
+    nome.innerHTML = "Total";
+    td[0].appendChild(nome);
+    tr.appendChild(td[0]);
+
+    // linha 3
+    tr.appendChild(document.createElement("td"));
+
+    // linha 4
+    td[1] = document.createElement("td");
+    let quant = document.createElement("p");
+    quant.classList.add("quantnumber");
+    quant.innerHTML = `${item[3]}`;
+    td[1].appendChild(quant);
+    tr.appendChild(td[1]);
+
+    // linha 5
+    td[2] = document.createElement("td");
+    td[2].innerHTML = REAIS.format(item[4]);
+    tr.appendChild(td[2]);
+}*/
+
 window.addEventListener('load', function init() {
     if (sessionStorage['products']){
         let itens = JSON.parse(sessionStorage.getItem('products'));
         let tam = itens.length;
+        const util = new UTIL();
         for (let i = 0; i < tam; i++) {
             let tr = document.createElement("tr");
 
@@ -57,9 +91,11 @@ window.addEventListener('load', function init() {
             // add produto
             img.src = (itens[i])[0];
             name.innerHTML = (itens[i])[1];
-            td[2].innerHTML = REAIS.format((itens[i])[2]);
+            td[2].innerHTML = util.reais.format((itens[i])[2]);
             quant.innerHTML = `${(itens[i])[3]}`;
-            td[4].innerHTML = REAIS.format((itens[i])[4]);
+            td[4].innerHTML = util.reais.format((itens[i])[4]);
+
         }
+        tam ? util.carrinhoNaoVazio() : util.carrinhoVazio();
     }
 })

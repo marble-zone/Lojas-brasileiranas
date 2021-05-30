@@ -1,12 +1,4 @@
-function emoji() {
-     //return "&loz;" // lozango
-     //return "&diams;" // diamante
-    //return "&#8766;" // 'S' deitado
-    //return "&#8776;" // duplo 'S' deitado
-    //return "&#8781;" // uma cintura fina deitada???
-    //return "&#8765;" // outro 'S' deitado
-    return "&#8927;" // tipo uma seta
-}
+const util = new UTIL();
 
 function AsideOn() {
     document.getElementsByTagName("aside")[0].style.display = "block";
@@ -20,13 +12,13 @@ function AsideOff() {
 
 function CallHome() {
     document.getElementById("content").innerHTML = '<object type="text/html" data="home.html"></object>';
-    document.getElementById("pagename").innerHTML = `${emoji()} Bem vindo! Aproveite nossas ofertas do dia ${emoji()}`
+    document.getElementById("pagename").innerHTML = `${util.emoji} Bem vindo! Aproveite nossas ofertas do dia ${util.emoji}`;
 }
 
 window.addEventListener("load", CallHome())
 
 function changeContent(valor) {
-    let emote = emoji();
+    let emote = util.emoji;
     pagename = document.getElementById("pagename");
     switch (valor) {
         case "home": 

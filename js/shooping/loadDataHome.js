@@ -36,8 +36,9 @@ window.addEventListener('load', function init() {
         pBtt.appendChild(addCartbtt);
         
         // data.js info
+        const util = new UTIL();
         title.innerHTML = PRODUTOS[i]["nome"];
-        price.innerHTML = REAIS.format(PRODUTOS[i]["preco"]);
+        price.innerHTML = util.reais.format(PRODUTOS[i]["preco"]);
         image.src = PRODUTOS[i]["img"];
     }
 })
