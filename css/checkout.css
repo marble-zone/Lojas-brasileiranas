@@ -17,6 +17,7 @@
 }
 
 .cart-table {
+    display: none;
     width: 85%;
     margin: 80px auto 0 auto;
     border-spacing: 0px;
@@ -115,7 +116,6 @@ td>button:hover {
 }
 
 #tableTotal {
-    display: none;
     border-radius: 0 0 10px 10px;
     margin-top: 0;
 }

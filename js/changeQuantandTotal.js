@@ -1,10 +1,24 @@
+const util = new UTIL();
+
+function calcularSomaQuant(num) {
+    let quant = JSON.parse(sessionStorage.getItem('somaQuant'));
+    sessionStorage.setItem('somaQuant', JSON.stringify(quant+num));
+}
+
+function calcularSomaTotal(antes, depois) {
+    let total = JSON.parse(sessionStorage.getItem('somaTotal'));
+    sessionStorage.setItem('somaTotal', JSON.stringify(total - antes + depois));
+}
+
 function calcularTotal(eleTotal, quant, carrinho, index) {
     const util = new UTIL();
     let total = (carrinho[index][2])*quant;
     eleTotal.innerHTML = util.reais.format(total);
     (carrinho[index])[3] = quant;
+    calcularSomaTotal((carrinho[index])[4], total);
     (carrinho[index])[4] = total;
     sessionStorage.setItem('products', JSON.stringify(carrinho));
+    util.carrinhoNaoVazio();
 }
 
 function increaseQuant(event) {
@@ -19,6 +33,7 @@ function increaseQuant(event) {
         number++;
         p = (button.parentNode).childNodes[1];
         p.innerHTML = `${number}`;
+        calcularSomaQuant(1);
         calcularTotal(tr.childNodes[4], number, carrinho, index);
     }
 }
@@ -35,6 +50,7 @@ function decreaseQuant(event) {
         number--;
         p = (button.parentNode).childNodes[1];
         p.innerHTML = `${number}`;
+        calcularSomaQuant(-1);
         calcularTotal(tr.childNodes[4], number, carrinho, index);
     }
 }

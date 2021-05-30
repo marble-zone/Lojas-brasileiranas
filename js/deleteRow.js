@@ -17,6 +17,8 @@ function deletarLinha(event) {
    let tbody = row.parentNode;
    let index = Array.prototype.indexOf.call(tbody.children, row);
    carrinho = JSON.parse(sessionStorage.getItem('products'));
+   sessionStorage.setItem('somaQuant', JSON.stringify(sessionStorage.getItem('somaQuant') - (carrinho[index])[3]));
+   sessionStorage.setItem('somaTotal', JSON.stringify(sessionStorage.getItem('somaTotal') - (carrinho[index])[4]));
    carrinho.splice(index, 1);
    row.remove();
    sessionStorage.setItem('products', JSON.stringify(carrinho));

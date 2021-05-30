@@ -11,13 +11,16 @@ class UTIL {
             maximumFractionDigits: 2,
         });
     }
-    
-    carrinhoNaoVazio(){
+
+    carrinhoNaoVazio() {
         document.querySelectorAll(".cart-table").forEach((tabela) => {
             tabela.style.display = "table";
         });
+        let eleQuant = document.getElementById("quantTotal");
+        eleQuant.innerHTML = `${JSON.parse(sessionStorage.getItem('somaQuant'))}`;
+        (eleQuant.nextElementSibling).innerHTML = util.reais.format(JSON.parse(sessionStorage.getItem('somaTotal')));
     }
-    
+
     carrinhoVazio() {
         document.querySelectorAll(".cart-table").forEach((tabela) => {
             tabela.style.display = "none";

@@ -36,13 +36,20 @@ function saveProduct(event) {
             return;
         }
     }
-    let convertido = (div[2].textContent).replace(/,/g, ".");
-    let price = parseFloat(convertido.replace(/R\$/g, ""));
+    let price = (div[2].textContent).replace(/,/g, ".");
+    price = parseFloat(price.replace(/R\$/g, ""));
     dados_produto.push(price);
     dados_produto.push(1);
     dados_produto.push(price);
     itens.push(dados_produto);
     sessionStorage.setItem('products', JSON.stringify(itens));
+    if (sessionStorage['somaQuant']){
+        sessionStorage.setItem('somaQuant', JSON.stringify(JSON.parse(sessionStorage.getItem('somaQuant'))+1));
+        sessionStorage.setItem('somaTotal', JSON.stringify(JSON.parse(sessionStorage.getItem('somaTotal'))+price));
+    }else{
+        sessionStorage.setItem('somaQuant', JSON.stringify(1));
+        sessionStorage.setItem('somaTotal', JSON.stringify(price));
+    }
     alert("Produto adicionado no carrinho !!");
     //button.disabled = true;
     //button.innerHTML = "Added to Cart";
