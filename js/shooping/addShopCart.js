@@ -9,8 +9,8 @@ let dinheiro = new Intl.NumberFormat('pt-BR', {
 
 window.addEventListener('load', function init(params) {
     if (sessionStorage['products']){
-        let produtos = JSON.parse(sessionStorage.getItem('products'));
-        let tam = produtos.length;
+        let itens = JSON.parse(sessionStorage.getItem('products'));
+        let tam = itens.length;
         for (let i = 0; i < tam; i++) {
             let tr = document.createElement("tr");
 
@@ -64,11 +64,11 @@ window.addEventListener('load', function init(params) {
             document.getElementsByTagName("tbody")[0].appendChild(tr);
 
             // add produto
-            img.src = `${(produtos[i])[0]}`;
-            name.innerHTML = `${(produtos[i])[1]}`;
-            td[2].innerHTML = `${dinheiro.format((produtos[i])[2])}`;
-            quant.innerHTML = `${(produtos[i])[3]}`;
-            td[4].innerHTML = `${dinheiro.format((produtos[i])[4])}`;
+            img.src = `${(itens[i])[0]}`;
+            name.innerHTML = `${(itens[i])[1]}`;
+            td[2].innerHTML = `${dinheiro.format((itens[i])[2])}`;
+            quant.innerHTML = `${(itens[i])[3]}`;
+            td[4].innerHTML = `${dinheiro.format((itens[i])[4])}`;
         }
     }
 })
