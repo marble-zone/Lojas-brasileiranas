@@ -1,9 +1,9 @@
 function VerifConsistenciaDados(div) {
-    tam = produtos.length;
+    tam = PRODUTOS.length;
     for (let i = 0; i < tam; i++) {
         let valor = (div[2].textContent).replace(/,/g, ".");
         valor = parseFloat(valor.replace(/R\$/g, ""));
-        if (produtos[i]['nome'].localeCompare(div[1].textContent) == 0 && produtos[i]['preco'] == valor)
+        if (PRODUTOS[i]['nome'].localeCompare(div[1].textContent) == 0 && PRODUTOS[i]['preco'] == valor)
             return false;
     }
     alert("!! ERRO !!\n\nUm erro de dados aconteceu. A página será recarregada para previnir maiores problemas");

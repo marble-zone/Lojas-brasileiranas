@@ -7,7 +7,7 @@ let urlBase = "images/products/"
     I: informática
     R: roupas
 */
-var produtos = [{
+var PRODUTOS = [{
     "nome": "Ovo",
     "preco": 2,
     "img": `${urlBase}ovo.png`,

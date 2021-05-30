@@ -1,6 +1,6 @@
 function calcularTotal(eleTotal, quant, carrinho, index) {
     let total = (carrinho[index][2])*quant;
-    eleTotal.innerHTML = `${dinheiro.format(total)}`;
+    eleTotal.innerHTML = REAIS.format(total);
     (carrinho[index])[3] = quant;
     (carrinho[index])[4] = total;
     sessionStorage.setItem('products', JSON.stringify(carrinho));

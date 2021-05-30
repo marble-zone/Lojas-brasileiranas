@@ -1,13 +1,4 @@
-let dinheiro = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-
-    // These options are needed to round to whole numbers if that's what you want.
-    minimumFractionDigits: 2, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-    maximumFractionDigits: 2, // (causes 2500.99 to be printed as $2,501)
-});
-
-window.addEventListener('load', function init(params) {
+window.addEventListener('load', function init() {
     if (sessionStorage['products']){
         let itens = JSON.parse(sessionStorage.getItem('products'));
         let tam = itens.length;
@@ -64,11 +55,11 @@ window.addEventListener('load', function init(params) {
             document.getElementsByTagName("tbody")[0].appendChild(tr);
 
             // add produto
-            img.src = `${(itens[i])[0]}`;
-            name.innerHTML = `${(itens[i])[1]}`;
-            td[2].innerHTML = `${dinheiro.format((itens[i])[2])}`;
+            img.src = (itens[i])[0];
+            name.innerHTML = (itens[i])[1];
+            td[2].innerHTML = REAIS.format((itens[i])[2]);
             quant.innerHTML = `${(itens[i])[3]}`;
-            td[4].innerHTML = `${dinheiro.format((itens[i])[4])}`;
+            td[4].innerHTML = REAIS.format((itens[i])[4]);
         }
     }
 })
