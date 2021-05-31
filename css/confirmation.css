@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 :root {
     --purpleBlue: #877aff;
     --darkpurple: #6757f8;
+    --cinzaclaro: #c2c2c2;
   }
-  
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +15,7 @@
 
 #container {
     width: 100%;
-    height: 80em;
+    height: 90em;
     background-color:  rgb(198, 128, 255); 
     display: flex;
     flex-direction: column;
@@ -42,7 +45,7 @@ p{
 #resumo{
     margin: 40px 0 0 0;
     width: 70%;
-    height: 60em;
+    height: 70em;
     background-color: var(--purpleBlue);
     border-radius: 20px;
 }
@@ -52,21 +55,66 @@ p{
     margin-bottom: 20px;
     text-align: center;
     font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#resumo strong,p{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+#resumo > hr{
+    width: 90%;
+    height: 1px;
+    border: none;
+    margin: 10px auto 10px auto;
+    color: var(--cinzaclaro); /* old IE */
+    background-color: var(--cinzaclaro); /* Modern Browsers */
 }
 
 #pedido{
     margin: 0 auto;
     width: 90%;
     height: 10em;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
 
+#icon-info{
+    height: 100px;
+}
+
+#info{
+    width: 80%;
+    height: 10em;
+    margin-left: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#info div{
+    width: 50%;
+    text-align: center;
+
+}
+
+#info div > p{
+    margin: 0;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+
 #organizer{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .icon{
@@ -77,24 +125,49 @@ p{
 
 #products{
     margin-left:2%;
-    width: 45%;
-    height: 20em;
-    border: 1px solid black;
+    width: 55%;
+    height: 28em;
+
 }
 
 #organizer > hr{
-    width: 3px;
-    height: 20em;
+    width: 1px;
+    height: 28em;
     border: none;
-    color: white; /* old IE */
-    background-color: white; /* Modern Browsers */
+    color: var(--cinzaclaro); /* old IE */
+    background-color:var(--cinzaclaro); /* Modern Browsers */
 }
+
 
 #address{
     margin-right:2%;
-    width: 45%;
-    height: 20em;
-    border: 1px solid black;
+    width: 35%;
+    height: 28em;
+    /*border: 1px solid black;*/
+}
+
+#address > p{
+   width: 80%;
+   margin: 0 auto 10px auto;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   /*border: 1px solid black;*/
+}
+
+#address-info{
+    margin: 0 auto;
+    width: 90%;
+    color: white;
+    text-align: center;
+    /*border: 1px solid black;*/
+
+}
+
+#address-info > p{
+    margin: 0;
+    font-size: 0.8em;
+    display: inline-block;
 }
 
 #price{
@@ -102,7 +175,6 @@ p{
     margin-top: 30px;
     width: 95%;
     height: 13em;
-    border: 1px solid black;
 }
 
 #confirm{
