@@ -152,3 +152,20 @@ footer {
 .iconheader[value="cart"] {
     background-image: url(../images/icons/shopping-cart.png);
 }
+
+.category {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+    background-size: 60px;
+}
+
+.category:hover{
+    opacity: 1;
+}
+
+.cat-selected {
+    background-color: blue
+}

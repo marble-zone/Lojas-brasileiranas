@@ -1,5 +1,5 @@
-function filterCategory(value){
-    //alert("Função filtrar categoria")
-    sessionStorage.setItem('categoria', value)
+function filterCategory(option){
+    sessionStorage.setItem('categoria', option.value)
+    //alterar a classe do option pois está selecionado
     changeContent("home")
 }
