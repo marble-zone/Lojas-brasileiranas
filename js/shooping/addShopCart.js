@@ -50,7 +50,7 @@ window.addEventListener('load', function init() {
 
             plus.innerHTML = "+";
             minus.innerHTML = "-";
-            excluir.innerHTML = "X";
+            excluir.innerHTML = "&#215;";
 
             document.getElementsByTagName("tbody")[0].appendChild(tr);
 

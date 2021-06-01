@@ -93,18 +93,37 @@ td>button {
     width: 40px;
     height: 40px;
     font-weight: bold;
-    color: rgb(198, 128, 255);
+    color: rgb(244, 208, 255);
     background-color: var(--purpleBlue);
     border: 3px solid transparent;
-    font-size: 1em;
+    padding-bottom: 3px;
+    font-size: 1.3em;
     cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    transition: 0.15s;
+    transition-duration: 0.2s;
 }
 
 td>button:hover {
-    background-color: white;
+    background-color: whitesmoke;
     background-clip: border-box;
     color: var(--purpleBlue);
     border: 3px solid var(--purpleBlue);
+}
+
+td>button:active {
+    background-color: rgb(230, 230, 230);
+    background-clip: border-box;
+    color: #7667ff;
+    border: 3px solid #7667ff;
+}
+
+.plusbtt {
+    border-radius: 100px 0px 0px 100px;
+}
+
+.minusbtt {
+    border-radius: 0px 100px 100px 0px;
 }
 
 .quantnumber {
