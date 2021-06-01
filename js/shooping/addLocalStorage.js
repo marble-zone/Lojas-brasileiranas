@@ -19,6 +19,7 @@ function _VerificaCarrinho(carrinho, produto) {
     return true;
 }
 
+// add product event
 function saveProduct(event) {
     let button = event.target;
     let div = ((button.parentNode).parentNode).childNodes;
@@ -50,6 +51,9 @@ function saveProduct(event) {
         sessionStorage.setItem('somaQuant', JSON.stringify(1));
         sessionStorage.setItem('somaTotal', JSON.stringify(price));
     }
+    if (localStorage['quantProds']){
+        localStorage.setItem('quantProds', JSON.stringify(JSON.parse(localStorage.getItem('quantProds')) + 1));
+    }else localStorage.setItem('quantProds', JSON.stringify(1));
     alert("Produto adicionado no carrinho !!");
     //button.disabled = true;
     //button.innerHTML = "Added to Cart";
