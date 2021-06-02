@@ -27,7 +27,8 @@ function saveProduct(event) {
         return;
     // image 0, name 1, price 2
     let dados_produto = [];
-    dados_produto.push((div[0].src).substring((div[0].src).indexOf("images")));
+    let image = div[0].childNodes[0];
+    dados_produto.push((image.src).substring((image.src).indexOf("images")));
     dados_produto.push(div[1].textContent);
     let itens = [];
     if (sessionStorage['products']){

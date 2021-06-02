@@ -12,24 +12,27 @@ window.addEventListener('load', function init() {
         // criando e classificando kkk Pedro piadas
         card = document.createElement("div");
         card.classList.add("card");
+        divimage = document.createElement("div");
+        divimage.classList.add("divimage");
         image = document.createElement("img");
         image.classList.add("image");
         image.alt = "Product";
-        title = document.createElement("h1");
+        title = document.createElement("h3");
         title.classList.add("name");
         price = document.createElement("p");
         price.classList.add("price");
         pBtt = document.createElement("p");
         addCartbtt = document.createElement("button");
         addCartbtt.classList.add("addCartbtt");
-        addCartbtt.innerHTML = "Add to Cart";
+        addCartbtt.innerHTML = "ADD TO CART";
 
         // listener
         addCartbtt.addEventListener('click', (event) => saveProduct(event));
 
         // appends
         document.getElementsByClassName("flex-container")[0].appendChild(card);
-        card.appendChild(image);
+        divimage.appendChild(image);
+        card.appendChild(divimage);
         card.appendChild(title);
         card.appendChild(price);
         card.appendChild(pBtt);
