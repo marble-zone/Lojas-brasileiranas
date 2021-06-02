@@ -1,5 +1,4 @@
-function filterCategory(option){
-    sessionStorage.setItem('categoria', option.value)
-    //alterar a classe do option pois está selecionado
+function filterCategory(cbo){
+    sessionStorage.setItem('categoria', JSON.stringify(cbo.value))
     changeContent("home")
 }

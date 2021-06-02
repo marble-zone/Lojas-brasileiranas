@@ -41,21 +41,14 @@
         </div>
     </div>
     <aside>
-        <option class="category" value='A' onclick="filterCategory(this)">
-            <p>A</p>
-        </option>
+        <h2>Filtrar por categoria</h2>
 
-        <option class="category" value='R' onclick="filterCategory(this)">
-            <p>R</p>
-        </option>
-
-        <option class="category" value='M' onclick="filterCategory(this)">
-            <p>M</p>
-        </option>
-
-        <option class="category" value='all' onclick="filterCategory(this)">
-            <p>Remover filtro</p>
-        </option>
+        <select id="cboCategoria" onchange="filterCategory(this)">
+            <option value="A">A</option>
+            <option value="R">R</option>
+            <option value="M">M</option>
+            <option value="all">Nenhum</option>
+        </select>
     </aside>
     <main id="content">
 

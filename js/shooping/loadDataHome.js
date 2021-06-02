@@ -7,7 +7,7 @@ window.addEventListener('load', function init() {
     tam = PRODUTOS.length;
     let categoria = "all";
     if(sessionStorage['categoria'])
-        categoria = sessionStorage.getItem('categoria');
+        categoria = JSON.parse(sessionStorage.getItem('categoria'));
     for (let i = 0; i < tam; i++) {
         /*names[i].innerHTML = `${produtos[i]["nome"]}`;
         prices[i].innerHTML = `${dinheiro.format(produtos[i]["preco"])}`;
