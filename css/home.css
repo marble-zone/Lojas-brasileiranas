@@ -21,6 +21,7 @@ h3 {
 }
 
 .card {
+    background-color: #ba8fff;
     box-shadow: 0 0 0.8em #8e82ff;
     max-width: 300px;
     margin: auto;
