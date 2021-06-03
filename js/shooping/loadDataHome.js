@@ -24,7 +24,7 @@ window.addEventListener('load', function init() {
         pBtt = document.createElement("p");
         addCartbtt = document.createElement("button");
         addCartbtt.classList.add("addCartbtt");
-        addCartbtt.innerHTML = "ADD TO CART";
+        addCartbtt.innerHTML = "ADD TO CART &#10798;";
 
         // listener
         addCartbtt.addEventListener('click', (event) => saveProduct(event));
