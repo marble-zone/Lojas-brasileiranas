@@ -41,14 +41,39 @@
         </div>
     </div>
     <aside>
-        <h2>Filtrar por categoria</h2>
+        <div>
+            <h2>Filtrar por categoria</h2>
 
+            <div>
+                <input type="checkbox" id="checkAlimento" name="alimento" value='A' onchange="filterCategory(this)">
+                <label for="checkAlimento">Alimento</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkR" name="R" value='R' onchange="filterCategory(this)">
+                <label for="checkR">R</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkM" name="M" value='M' onchange="filterCategory(this)">
+                <label for="checkM">M</label>
+            </div>
+
+            <!--
+            <div>
+            <input type="checkbox" id="checkAll" name="all" value='all' onchange="filterCategory(this)">
+            <label for="checkAll">All</label>
+            </div>
+            -->
+        </div>
+        <!--
         <select id="cboCategoria" onchange="filterCategory(this)">
             <option value="A">A</option>
             <option value="R">R</option>
             <option value="M">M</option>
             <option value="all">Nenhum</option>
         </select>
+        -->
     </aside>
     <main id="content">
 

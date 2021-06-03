@@ -5,15 +5,18 @@ window.addEventListener('load', function init() {
     images = document.getElementsByClassName("image");
     let tam = names.length;*/
     tam = PRODUTOS.length;
-    let categoria = "all";
+    /*
+    let categoria = ["all"];
     if(sessionStorage['categoria'])
         categoria = JSON.parse(sessionStorage.getItem('categoria'));
+    */
     for (let i = 0; i < tam; i++) {
         /*names[i].innerHTML = `${produtos[i]["nome"]}`;
         prices[i].innerHTML = `${dinheiro.format(produtos[i]["preco"])}`;
         images[i].src = `${produtos[i]["img"]}`;*/
         // criando e classificando kkk Pedro piadas
-        if(PRODUTOS[i]['cat'].localeCompare(categoria) == 0 || categoria.localeCompare('all') == 0){
+        //if(PRODUTOS[i]['cat'].localeCompare(categoria) == 0 || categoria.localeCompare('all') == 0){
+        if(checaProdutoFiltros(PRODUTOS[i]['cat'])){
             card = document.createElement("div");
             card.classList.add("card");
             image = document.createElement("img");
