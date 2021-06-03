@@ -1,10 +1,10 @@
 window.addEventListener('load', function init() {
+    const util = new UTIL();
     if (sessionStorage['products']){
         let itens = JSON.parse(sessionStorage.getItem('products'));
         let tam = itens.length;
         for (let i = 0; i < tam; i++) {
             let tr = document.createElement("tr");
-            const util = new UTIL();
             let td = [];
             td[0] = document.createElement("td");
             td[1] = document.createElement("td");
@@ -62,8 +62,10 @@ window.addEventListener('load', function init() {
             td[4].innerHTML = util.reais.format((itens[i])[4]);
 
         }
-        tam > 0 ? util.carrinhoNaoVazio() : util.carrinhoVazio();
-    }
+        if(tam > 0) 
+            util.carrinhoNaoVazio();
+            
+    }else util.carrinhoVazio();
     if (localStorage['quantProds'])
         localStorage.setItem('quantProds', JSON.stringify(0));
 })
