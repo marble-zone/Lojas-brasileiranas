@@ -23,8 +23,29 @@ function filterCategory(check){
 
     sessionStorage.setItem('categoria', JSON.stringify(listaFiltros))
 
-    changeContent("home")
+    //changeContent("home")
 }
+
+/*
+function filterPreco(check){
+    let precoMin = 0
+    let precoMax = 99999
+
+    if(check.checked){
+        let precos = getNumSubStr(check.value)
+        precoMin = precos[0]
+        precoMax = precos[1]
+
+        let checkboxes = document.getElementsByName('CheckPreco')
+        checkboxes.forEach((item) => {
+        if (item !== check) item.checked = false
+    })
+    }
+
+    sessionStorage.setItem('precoMin', JSON.stringify(precoMin))
+    sessionStorage.setItem('precoMax', JSON.stringify(precoMax))
+}
+*/
 
 function checaProdutoFiltros(cat){
     let listaFiltros = ['all']
@@ -40,3 +61,57 @@ function checaProdutoFiltros(cat){
 
     return false
 }
+
+function checaProdutoPreco(preco){
+
+    let precoMin = 0
+    let precoMax = 99999
+
+    if(sessionStorage.getItem('precoMin') !== null)
+        precoMin = JSON.parse(sessionStorage.getItem('precoMin'))
+
+    if(sessionStorage.getItem('precoMax') !== null)
+        precoMax = JSON.parse(sessionStorage.getItem('precoMax'))
+ 
+    if(preco < precoMin || preco > precoMax)
+        return false
+
+    return true
+}
+
+function storeValues(){
+    precoMinElem = document.getElementById('precoMin')
+    precoMaxElem = document.getElementById('precoMax')
+
+    precoMin = parseFloat(precoMinElem.value)
+    precoMax = parseFloat(precoMaxElem.value)
+
+    if(precoMinElem.value == "")
+        precoMin = 0
+    
+    if(precoMaxElem.value == "")
+        precoMax = 99999
+
+    sessionStorage.setItem('precoMin', JSON.stringify(precoMin))
+    sessionStorage.setItem('precoMax', JSON.stringify(precoMax))
+
+    changeContent('home')
+}
+
+function validate(evt) {
+    var theEvent = evt || window.event;
+  
+    // Handle paste
+    if (theEvent.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+    } else {
+    // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+    }
+    var regex = /[0-9]|\./;
+    if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }

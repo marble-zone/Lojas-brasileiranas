@@ -16,7 +16,7 @@ window.addEventListener('load', function init() {
         images[i].src = `${produtos[i]["img"]}`;*/
         // criando e classificando kkk Pedro piadas
         //if(PRODUTOS[i]['cat'].localeCompare(categoria) == 0 || categoria.localeCompare('all') == 0){
-        if(checaProdutoFiltros(PRODUTOS[i]['cat'])){
+        if(checaProdutoFiltros(PRODUTOS[i]['cat']) && checaProdutoPreco(PRODUTOS[i]['preco'])){
             card = document.createElement("div");
             card.classList.add("card");
             image = document.createElement("img");
