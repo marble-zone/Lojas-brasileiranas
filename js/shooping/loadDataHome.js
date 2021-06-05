@@ -5,43 +5,51 @@ window.addEventListener('load', function init() {
     images = document.getElementsByClassName("image");
     let tam = names.length;*/
     tam = PRODUTOS.length;
+    /*
+    let categoria = ["all"];
+    if(sessionStorage['categoria'])
+        categoria = JSON.parse(sessionStorage.getItem('categoria'));
+    */
     for (let i = 0; i < tam; i++) {
         /*names[i].innerHTML = `${produtos[i]["nome"]}`;
         prices[i].innerHTML = `${dinheiro.format(produtos[i]["preco"])}`;
         images[i].src = `${produtos[i]["img"]}`;*/
         // criando e classificando kkk Pedro piadas
-        card = document.createElement("div");
-        card.classList.add("card");
-        divimage = document.createElement("div");
-        divimage.classList.add("divimage");
-        image = document.createElement("img");
-        image.classList.add("image");
-        image.alt = "Product";
-        title = document.createElement("h3");
-        title.classList.add("name");
-        price = document.createElement("p");
-        price.classList.add("price");
-        pBtt = document.createElement("p");
-        addCartbtt = document.createElement("button");
-        addCartbtt.classList.add("addCartbtt");
-        addCartbtt.innerHTML = "ADD TO CART &#10798;";
+        //if(PRODUTOS[i]['cat'].localeCompare(categoria) == 0 || categoria.localeCompare('all') == 0){
+        if(checaProdutoFiltros(PRODUTOS[i]['cat']) && checaProdutoPreco(PRODUTOS[i]['preco'])){
+            card = document.createElement("div");
+            card.classList.add("card");
+            divimage = document.createElement("div");
+            divimage.classList.add("divimage");
+            image = document.createElement("img");
+            image.classList.add("image");
+            image.alt = "Product";
+            title = document.createElement("h3");
+            title.classList.add("name");
+            price = document.createElement("p");
+            price.classList.add("price");
+            pBtt = document.createElement("p");
+            addCartbtt = document.createElement("button");
+            addCartbtt.classList.add("addCartbtt");
+            addCartbtt.innerHTML = "ADD TO CART &#10798;";
 
-        // listener
-        addCartbtt.addEventListener('click', (event) => saveProduct(event));
+            // listener
+            addCartbtt.addEventListener('click', (event) => saveProduct(event));
 
-        // appends
-        document.getElementsByClassName("flex-container")[0].appendChild(card);
-        divimage.appendChild(image);
-        card.appendChild(divimage);
-        card.appendChild(title);
-        card.appendChild(price);
-        card.appendChild(pBtt);
-        pBtt.appendChild(addCartbtt);
-        
-        // data.js info
-        const util = new UTIL();
-        title.innerHTML = PRODUTOS[i]["nome"];
-        price.innerHTML = util.reais.format(PRODUTOS[i]["preco"]);
-        image.src = PRODUTOS[i]["img"];
+            // appends
+            document.getElementsByClassName("flex-container")[0].appendChild(card);
+            divimage.appendChild(image);
+            card.appendChild(divimage);
+            card.appendChild(title);
+            card.appendChild(price);
+            card.appendChild(pBtt);
+            pBtt.appendChild(addCartbtt);
+            
+            // data.js info
+            const util = new UTIL();
+            title.innerHTML = PRODUTOS[i]["nome"];
+            price.innerHTML = util.reais.format(PRODUTOS[i]["preco"]);
+            image.src = PRODUTOS[i]["img"];
+        }
     }
 })

@@ -45,7 +45,74 @@
         </div>
     </div>
     <aside>
+        <div>
+            <div>
+                <h2>Filtrar por categoria</h2>
 
+                <div>
+                    <input type="checkbox" id="checkAlimento" name="alimento" value='A' onchange="filterCategory(this)">
+                    <label for="checkAlimento">Alimento</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="checkR" name="R" value='R' onchange="filterCategory(this)">
+                    <label for="checkR">R</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="checkM" name="M" value='M' onchange="filterCategory(this)">
+                    <label for="checkM">M</label>
+                </div>
+            </div>
+
+            <div>
+                <h2>Filtrar por preço</h2>
+
+                <div>
+                    <input type="number" id="precoMin" onkeypress='validate(event)'>
+                    <label for="precoMin">Preco mínimo</label>
+                </div>
+
+                <div>
+                    <input type="number" id="precoMax" onkeypress='validate(event)'>
+                    <label for="precoMax">Preco máximo</label>
+                </div>
+
+                <!--
+                <div>
+                    <input type="checkbox" id="checkPreco1" name="CheckPreco" value='0 5' onchange="filterPreco(this)">
+                    <label for="checkPreco1">Abaixo de R$5,00</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="checkPreco2" name="CheckPreco" value='5 100' onchange="filterPreco(this)">
+                    <label for="checkPreco2">Entre R$5,00 e 100</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="checkPreco3" name="CheckPreco" value='100 99999' onchange="filterPreco(this)">
+                    <label for="checkPreco3">Acima de 100</label>
+                </div>
+                -->
+            </div>
+
+            <button onclick="storeValues()">Filtrar</button>
+
+            <!--
+            <div>
+            <input type="checkbox" id="checkAll" name="all" value='all' onchange="filterCategory(this)">
+            <label for="checkAll">All</label>
+            </div>
+            -->
+        </div>
+        <!--
+        <select id="cboCategoria" onchange="filterCategory(this)">
+            <option value="A">A</option>
+            <option value="R">R</option>
+            <option value="M">M</option>
+            <option value="all">Nenhum</option>
+        </select>
+        -->
     </aside>
     <main id="content">
 
@@ -61,5 +128,6 @@
 <script type="text/javascript" src="js/fixedScroll.js"> </script>
 <script type="text/javascript" src="js/chargePages.js"> </script>
 <script type="text/javascript" src="js/backUpbtt.js"> </script>
+<script type="text/javascript" src="js/shooping/filterCategory.js"> </script>
 <script type="text/javascript" src="js/cartUpNum.js"> </script>
 </html>

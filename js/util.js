@@ -66,6 +66,11 @@ class UTIL {
     }
 }
 
+function getNumSubStr(numberString) {
+    let numList = numberString.split(' ');
+    return numList
+}
+
 /*var REAIS = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
