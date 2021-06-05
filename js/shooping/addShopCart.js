@@ -62,8 +62,7 @@ window.addEventListener('load', function init() {
             td[4].innerHTML = util.reais.format((itens[i])[4]);
 
         }
-        if(tam > 0) 
-            util.carrinhoNaoVazio();
+        tam > 0 ? util.carrinhoNaoVazio() : util.carrinhoVazio();
             
     }else util.carrinhoVazio();
     if (localStorage['quantProds'])
