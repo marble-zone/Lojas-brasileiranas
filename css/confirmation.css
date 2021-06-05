@@ -1,8 +1,8 @@
 :root {
-    --purpleBlue: #877aff;
-    --darkpurple: #6757f8;
+    --purpleBlue: #8b80ec;
+    --cinzaclaro: #c2c2c2;
   }
-  
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
 
 #container {
     width: 100%;
-    height: 80em;
+    min-height: 90em;
     background-color:  rgb(198, 128, 255); 
     display: flex;
     flex-direction: column;
@@ -39,10 +39,15 @@ p{
     color: white;
 }
 
+.icon{
+    display: block;
+    margin: auto;
+}
+
 #resumo{
-    margin: 40px 0 0 0;
-    width: 70%;
-    height: 60em;
+    margin: 40px 0 120px 0;
+    width: 55%;
+    min-height: 62em;
     background-color: var(--purpleBlue);
     border-radius: 20px;
 }
@@ -54,68 +59,186 @@ p{
     font-size: 2em;
 }
 
+#resumo > hr{
+    width: 90%;
+    height: 1px;
+    border: none;
+    margin: 10px auto 10px auto;
+    color: var(--cinzaclaro); /* old IE */
+    background-color: var(--cinzaclaro); /* Modern Browsers */
+}
+
 #pedido{
     margin: 0 auto;
     width: 90%;
-    height: 10em;
-    border: 1px solid black;
+    min-height: 9em;
+    display: flex;
+    flex-direction: row;
+}
+
+#icon-info{
+    height: 100px;
+}
+
+#info{
+    width: 80%;
+    min-height: 9em;
+    margin-left: 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#info div{
+    width: 50%;
+    text-align: center;
+}
+
+#info div > p{
+    margin: 0;
+    font-size: 0.8em;
+    word-wrap: break-word;
 }
 
 #organizer{
-    margin-top: 30px;
-    width: 100%;
+    margin: 10px auto 0 auto;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.icon{
-    display: block;
-    margin: auto;
-}
-
-
-#products{
-    margin-left:2%;
-    width: 45%;
-    height: 20em;
-    border: 1px solid black;
-}
 
 #organizer > hr{
-    width: 3px;
-    height: 20em;
+    width: 1px;
+    min-height: 20em;
     border: none;
-    color: white; /* old IE */
-    background-color: white; /* Modern Browsers */
+    color: var(--cinzaclaro); /* old IE */
+    background-color:var(--cinzaclaro); /* Modern Browsers */ 
 }
 
 #address{
     margin-right:2%;
-    width: 45%;
-    height: 20em;
-    border: 1px solid black;
+    width: 60%;
+    min-height: 20em;
+}
+
+#address > p{
+   width: 80%;
+   margin: 0 auto 10px auto;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+}
+
+#address-info{
+    margin: 0 auto;
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+
+#address-info > p{
+    margin: 0 0 8px 0;
+    font-size: 0.8em;
+    word-wrap: break-word;
 }
 
 #price{
     margin: 0 auto;
+    width: 40%;
+    min-height: 20em;
+}
+
+#price > p{
+    width: 80%;
+    margin: 0 auto 10px auto;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+ }
+
+ #price-info{
+    margin: 0 auto;
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+
+#price-info > p{
+    margin: 0;
+    font-size: 0.8em;
+    word-wrap: break-word;
+}
+
+#products{
+    margin: 0 auto;
     margin-top: 30px;
-    width: 95%;
-    height: 13em;
-    border: 1px solid black;
+    width: 90%;
+    min-height: 15em;
+}
+
+#products-info{
+    margin: 20px auto 0 auto;
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-radius: 10px 10px 0 0;
+}
+
+#products-info th{
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    outline: 1px solid var(--cinzaclaro);
+}
+
+#products-info th:first-child{
+    border-radius: 10px 0 0 0;
+}
+
+#products-info th:last-child{
+    border-radius: 0 10px 0 0;
+}
+
+#products-info td{
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+    word-wrap: break-word;
+}
+
+#products-info th:nth-child(1) {
+    width: 45%;
+}
+
+#products-info th:nth-child(2) {
+    width: 10%;
+}
+
+#products-info th:nth-child(3) {
+    width: 20%;
+}
+
+#products-info th:nth-child(4) {
+    width: 20%;
 }
 
 #confirm{
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 50px auto 50px auto;
     display: block;
     width: 220px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-weight: bold;
     color: white;
-    background-color: var(--darkpurple);
-    border: 3px solid transparent;
+    background: linear-gradient(to right,#8375ff, #9553ff);
+    border: 0;
     font-size: 1em;
     cursor: pointer;
 }
@@ -127,12 +250,10 @@ p{
 }
 
 #confirm:hover{
-    background-color: white;
-    background-clip: border-box;
-    color: var(--darkpurple);
-    border: 3px solid var(--darkpurple);
+    background: linear-gradient(to left, #bf75ff, #8d53ff);;
+    color: white; 
 }
 
 #confirm:hover > .return{
-    color: var(--darkpurple);
+    color: white;
 }

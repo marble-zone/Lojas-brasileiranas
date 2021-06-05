@@ -19,24 +19,27 @@ window.addEventListener('load', function init() {
         if(checaProdutoFiltros(PRODUTOS[i]['cat']) && checaProdutoPreco(PRODUTOS[i]['preco'])){
             card = document.createElement("div");
             card.classList.add("card");
+            divimage = document.createElement("div");
+            divimage.classList.add("divimage");
             image = document.createElement("img");
             image.classList.add("image");
             image.alt = "Product";
-            title = document.createElement("h1");
+            title = document.createElement("h3");
             title.classList.add("name");
             price = document.createElement("p");
             price.classList.add("price");
             pBtt = document.createElement("p");
             addCartbtt = document.createElement("button");
             addCartbtt.classList.add("addCartbtt");
-            addCartbtt.innerHTML = "Add to Cart";
+            addCartbtt.innerHTML = "ADD TO CART &#10798;";
 
             // listener
             addCartbtt.addEventListener('click', (event) => saveProduct(event));
 
             // appends
             document.getElementsByClassName("flex-container")[0].appendChild(card);
-            card.appendChild(image);
+            divimage.appendChild(image);
+            card.appendChild(divimage);
             card.appendChild(title);
             card.appendChild(price);
             card.appendChild(pBtt);

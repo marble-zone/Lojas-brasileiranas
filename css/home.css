@@ -4,35 +4,49 @@
     outline: 0;
 }
 
+h3 {
+    color: rgb(233, 230, 255);
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 2%;
 }
 
 .flex-container>div {
-    background-color: #c4439d;
-    margin: 10px;
+    margin: 20px;
     padding: 20px;
     font-size: 30px;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(60, 0, 83, 0.2);
+    background-color: #ba8fff;
+    box-shadow: 0 0 0.8em #8e82ff;
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
+    border-radius: 20px 4px 20px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .price {
-    color: grey;
+    color: whitesmoke;
     font-size: 22px;
+    font-weight: bold;
+}
+
+.divimage {
+    height: 180px;
 }
 
 .image {
-    width: 100%;
-    height: 200px;
+    max-width: 170px;
+    height: auto;
+    max-height: 170px;
 }
 
 .addCartbtt {
@@ -40,15 +54,22 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background: linear-gradient(to right, #8375ff, #9553ff);
+    /*background: linear-gradient(to right, #d269fc, #9d53ff);*/
     text-align: center;
     cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+    width: 150px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px 30px 30px 30px;
+    transition: 0.3s;
+    opacity: 0.85;
 }
 
 .addCartbtt:hover {
-    opacity: 0.7;
+    opacity: 1;
+    background: linear-gradient(to left, #8375ff, #9553ff);
 }
 
 .navbar {

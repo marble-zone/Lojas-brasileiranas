@@ -10,25 +10,114 @@
         <p>Sua compra foi realizada com sucesso, veja os detalhes abaixo:</p>
         <div id="resumo">
             <h1>Resumo do Pedido</h1>
+            <hr>
             <div id="pedido">
-                <span class="iconify" data-icon="bi-file-earmark-medical-fill" data-inline="false"></span>
-            </div>
-            <div id="organizer">
-                <div id="products">
-                    <span class="iconify icon" data-icon="bi:box-seam" data-inline="false"></span>
+                <span class="iconify" id="icon-info" data-icon="bi-file-earmark-medical-fill"
+                    data-inline="false"></span>
+                <div id="info">
+                    <div>
+                        <br>
+                        <strong>Nome: </strong>
+                        <br>
+                        <p id="nome">Carlos Vagner</p>
+                        <br>
+
+                        <strong>Email:</strong>
+                        <br>
+                        <p id="email">bbb</p>
+                        <br>
+                    </div>
+                    <div>
+                        <br>
+                        <strong>Número do Pedido:</strong>
+                        <br>
+                        <p id="numpedido">ccc</p>
+                        <br>
+
+                        <strong>Data do Pedido:</strong>
+                        <br>
+                        <p id="data">ddd</p>
+                        <br>
+                    </div>
                 </div>
-                <hr>
+            </div>
+            <hr>
+            <div id="organizer">
                 <div id="address">
                     <span class="iconify icon" data-icon="clarity:map-outline-alerted" data-inline="false"></span>
+                    <p>Endereço de Entrega:</p>
+                    <div id="address-info">
+                        <strong>Rua: </strong>
+                        <br>
+                        <p id="rua">aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+                        <strong>Bairro:</strong>
+                        <br>
+                        <p id="bairro">bbbbbbbbbbbb</p>
+
+                        <strong>CEP: </strong>
+                        <br>
+                        <p id="cep">1242565</p>
+
+                        <strong>Cidade:</strong>
+                        <br>
+                        <p id="cidade">sgfdhfdghdtfg</p>
+
+                        <strong>País:</strong>
+                        <br>
+                        <p id="pais">Brazil</p>
+
+                    </div>
                 </div>
+                <hr>
+                <div id="price">
+                    <span class="iconify icon" data-icon="fa-solid:money-check-alt" data-inline="false"></span>
+                    <p>Dados de Pagamento:</p>
+                    <div id="price-info">
+                        <strong>Subtotal: </strong>
+                        <br>
+                        <p id="subtotal">aaa</p>
+                        <br>
+
+                        <strong>Frete:</strong>
+                        <br>
+                        <p id="frete">bbb</p>
+                        <br>
+
+                        <strong>Total:</strong>
+                        <br>
+                        <p id="total">bbb</p>
+                        <br>
+                    </div>
+                </div>
+
             </div>
-            <div id="price">
-                
+            <hr>
+            <div id="products">
+                <span class="iconify icon" data-icon="bi:box-seam" data-inline="false"></span>
+                    <table id="products-info">
+                        <thead>
+                            <th>Produto</th>
+                            <th>Qtd</th>
+                            <th>Preço</th>
+                            <th>Total</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>aaaa</td>
+                                <td>12</td>
+                                <td>1234</td>
+                                <td>123456</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </div>
+
             <button id="confirm">
                 <span class="iconify return" data-icon="akar-icons:arrow-back-thick-fill" data-inline="false"></span>
                 Voltar a tela inicial
             </button>
         </div>
+
     </div>
 </body>

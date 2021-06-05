@@ -19,6 +19,7 @@ function _VerificaCarrinho(carrinho, produto) {
     return true;
 }
 
+// add product event
 function saveProduct(event) {
     let button = event.target;
     let div = ((button.parentNode).parentNode).childNodes;
@@ -26,7 +27,8 @@ function saveProduct(event) {
         return;
     // image 0, name 1, price 2
     let dados_produto = [];
-    dados_produto.push((div[0].src).substring((div[0].src).indexOf("images")));
+    let image = div[0].childNodes[0];
+    dados_produto.push((image.src).substring((image.src).indexOf("images")));
     dados_produto.push(div[1].textContent);
     let itens = [];
     if (sessionStorage['products']){
@@ -50,6 +52,9 @@ function saveProduct(event) {
         sessionStorage.setItem('somaQuant', JSON.stringify(1));
         sessionStorage.setItem('somaTotal', JSON.stringify(price));
     }
+    if (localStorage['quantProds']){
+        localStorage.setItem('quantProds', JSON.stringify(JSON.parse(localStorage.getItem('quantProds')) + 1));
+    }else localStorage.setItem('quantProds', JSON.stringify(1));
     alert("Produto adicionado no carrinho !!");
     //button.disabled = true;
     //button.innerHTML = "Added to Cart";

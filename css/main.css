@@ -87,6 +87,18 @@ footer {
     height: 170px;
 }
 
+#cartUpdate {
+    display: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 20px 20px 20px 20px;
+    float: right;
+    background-color: rgb(228, 91, 255);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 0.75em;
+}
+
 #divpagename {
     grid-column-start: 1;
     grid-column-end: 3;

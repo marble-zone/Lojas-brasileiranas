@@ -22,9 +22,47 @@ class UTIL {
     }
 
     carrinhoVazio() {
-        document.querySelectorAll(".cart-table").forEach((tabela) => {
-            tabela.style.display = "none";
-        });
+        let tabela = document.getElementById("tablePrincipal");
+        let tableTotal = document.getElementById("tableTotal");
+        tableTotal.style.display = "none";
+
+        let tbody = tabela.children[1];
+        
+        let tr = document.createElement("tr");
+        tr.style.height = "100px";
+        
+        let td = document.createElement("td");
+        td.setAttribute("colspan", "5");
+        td.style.textAlign = "center";
+
+        let div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.flexDirection = "row";
+        div.style.justifyContent = "center";
+        div.style.alignItems = "center";
+      
+        let icon = document.createElement("span");
+        icon.classList.add("iconify");
+        icon.setAttribute("data-icon", "bi-cart-x-fill");
+        icon.setAttribute("data-inline", "false");
+        icon.style.color = "white";
+        icon.style.height = "60px";
+        icon.style.width = "60px";
+        icon.style.marginRight = "50px";
+
+        let p = document.createElement("p");
+        p.innerText = "Carrinho Vazio";
+        p.style.fontSize = "1.2em";
+        p.style.color = "white";
+       
+
+        div.appendChild(icon);
+        div.appendChild(p);
+        td.appendChild(div);
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+
+        tabela.style.display = "table";
     }
 }
 

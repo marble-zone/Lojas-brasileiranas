@@ -1,10 +1,10 @@
 window.addEventListener('load', function init() {
+    const util = new UTIL();
     if (sessionStorage['products']){
         let itens = JSON.parse(sessionStorage.getItem('products'));
         let tam = itens.length;
         for (let i = 0; i < tam; i++) {
             let tr = document.createElement("tr");
-            const util = new UTIL();
             let td = [];
             td[0] = document.createElement("td");
             td[1] = document.createElement("td");
@@ -50,7 +50,7 @@ window.addEventListener('load', function init() {
 
             plus.innerHTML = "+";
             minus.innerHTML = "-";
-            excluir.innerHTML = "X";
+            excluir.innerHTML = "&#215;";
 
             document.getElementsByTagName("tbody")[0].appendChild(tr);
 
@@ -63,5 +63,8 @@ window.addEventListener('load', function init() {
 
         }
         tam > 0 ? util.carrinhoNaoVazio() : util.carrinhoVazio();
-    }
+            
+    }else util.carrinhoVazio();
+    if (localStorage['quantProds'])
+        localStorage.setItem('quantProds', JSON.stringify(0));
 })
