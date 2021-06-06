@@ -13,33 +13,32 @@ class UTIL {
     }
 
     carrinhoNaoVazio() {
-        document.querySelectorAll(".cart-table").forEach((tabela) => {
-            tabela.style.display = "table";
-        });
+        document.getElementById("tablePrincipal").style.display = "block";
+        document.getElementById("tableTotal").style.display = "grid";
         let eleQuant = document.getElementById("quantTotal");
         eleQuant.innerHTML = `${JSON.parse(sessionStorage.getItem('somaQuant'))}`;
         (eleQuant.nextElementSibling).innerHTML = util.reais.format(JSON.parse(sessionStorage.getItem('somaTotal')));
     }
 
     carrinhoVazio() {
-        let tabela = document.getElementById("tablePrincipal");
         let tableTotal = document.getElementById("tableTotal");
         tableTotal.style.display = "none";
-
-        let tbody = tabela.children[1];
         
-        let tr = document.createElement("tr");
-        tr.style.height = "100px";
-        
-        let td = document.createElement("td");
-        td.setAttribute("colspan", "5");
-        td.style.textAlign = "center";
+        /*let tr = document.createElement("div");
+        tr.classList.add("tr");*/
 
         let div = document.createElement("div");
         div.style.display = "flex";
         div.style.flexDirection = "row";
         div.style.justifyContent = "center";
         div.style.alignItems = "center";
+        div.style.paddingTop = "15px";
+        div.style.paddingBottom = "15px";
+        //border - bottom: 1px solid var(--purpleBlue);
+        div.style.borderBottomStyle = "solid";
+        div.style.borderBottomWidth = "1px";
+        div.style.borderBottomColor = "#877aff";
+        div.style.backgroundColor = "rgb(184, 119, 236)";
       
         let icon = document.createElement("span");
         icon.classList.add("iconify");
@@ -52,17 +51,17 @@ class UTIL {
 
         let p = document.createElement("p");
         p.innerText = "Carrinho Vazio";
-        p.style.fontSize = "1.2em";
+        p.style.fontSize = "1.4em";
         p.style.color = "white";
+        p.style.fontWeight = "bold";
        
 
         div.appendChild(icon);
         div.appendChild(p);
-        td.appendChild(div);
-        tr.appendChild(td);
-        tbody.appendChild(tr);
-
-        tabela.style.display = "table";
+        //tr.appendChild(div);
+        let tbody = document.getElementById("tablePrincipal");
+        tbody.appendChild(div);
+        tbody.style.display = "block";
     }
 }
 
