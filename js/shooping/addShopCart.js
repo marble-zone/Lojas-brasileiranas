@@ -76,6 +76,9 @@ window.addEventListener('load', function init() {
         tam > 0 ? util.carrinhoNaoVazio() : util.carrinhoVazio();
             
     }else util.carrinhoVazio();
-    if (localStorage['quantProds'])
+    if (localStorage['quantProds']){
+        let prods = JSON.parse(localStorage.getItem('quantProds'));
+        sessionStorage.setItem('quantProds', JSON.stringify(prods));
         localStorage.setItem('quantProds', JSON.stringify(0));
+    }
 })
