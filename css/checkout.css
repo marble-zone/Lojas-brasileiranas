@@ -50,21 +50,8 @@
 }
 
 .th1 {
-    flex-grow: 1.4;
     grid-column-start: 1;
     grid-column-start: 2;
-}
-
-.th2 {
-    flex-grow: 2.1;
-}
-
-.th3 {
-    flex-grow: 2.2;
-}
-
-.th4 {
-    flex-grow: 1;
 }
 
 .tr {
@@ -93,22 +80,6 @@
 .td1 {
     display: flex;
     gap: 20px;
-}
-
-.td2 {
-    flex-grow: 1;
-}
-
-.td3 {
-    flex-grow: 1;
-}
-
-.td4 {
-    flex-grow: 1;
-}
-
-.td5 {
-    flex-grow: 1;
 }
 
 .product {
