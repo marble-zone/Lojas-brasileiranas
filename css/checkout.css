@@ -16,8 +16,8 @@
     overflow: hidden;
 }
 
-.cart-table {
-    display: none;
+#cart-table {
+    display: block;
     width: 85%;
     margin: 80px auto 0 auto;
     border-spacing: 0px;
@@ -26,35 +26,38 @@
     border-radius: 10px 10px 0 0;
 }
 
-.cart-table th {
-    height: 70px;
+#tablePrincipal {
+    display: none;
+}
+
+#tableTotal {
+    display: none;
+}
+
+.thead {
+    display: grid;
+    grid-template-columns: 15% 20% 20% 20% 20%;
     background-color: var(--purpleBlue);
+}
+
+.th {
+    height: 50px;
     color: white;
     font-weight: bold;
     font-size: 1.4em;
+    margin-top: 15px;
+    text-align: center;
 }
 
-.cart-table th:nth-child(1) {
-    width: 5%;
+.th1 {
+    grid-column-start: 1;
+    grid-column-start: 2;
 }
 
-.cart-table th:nth-child(2) {
-    width: 45%;
-}
-
-.cart-table th:nth-child(3) {
-    width: 10%;
-}
-
-.cart-table th:nth-child(4) {
-    width: 25%;
-}
-
-.cart-table th:nth-child(5) {
-    width: 15%;
-}
-
-.cart-table td {
+.tr {
+    display: grid;
+    grid-template-columns: 15% 20% 20% 20% 20%;
+    border-bottom: 1px solid var(--purpleBlue);
     height: 100px;
     color: white;
     font-weight: bold;
@@ -62,12 +65,21 @@
     text-align: center;
 }
 
-.cart-table tr {
-    border-bottom: 1px solid var(--purpleBlue);
+.tr:nth-of-type(even) {
+    background-color: rgb(184, 119, 236);
 }
 
-.cart-table tr:nth-of-type(even) {
-    background-color: rgb(184, 119, 236);
+.marginBtn {
+    margin-top: 30px;
+}
+
+.marginText {
+    margin-top: 35px;
+}
+
+.td1 {
+    display: flex;
+    gap: 20px;
 }
 
 .product {
@@ -83,17 +95,10 @@
     max-width: 100px;
     height: auto;
     max-height: 80px;
+    margin-top: 10px;
 }
 
-.textproduct {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding-top: 25px;
-    text-align: center;
-}
-
-td>button {
-    margin: 0 auto 0 auto;
+div>button {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -109,14 +114,14 @@ td>button {
     transition-duration: 0.2s;
 }
 
-td>button:hover {
+div>button:hover {
     background-color: whitesmoke;
     background-clip: border-box;
     color: var(--purpleBlue);
     border: 3px solid var(--purpleBlue);
 }
 
-td>button:active {
+div>button:active {
     background-color: rgb(230, 230, 230);
     background-clip: border-box;
     color: #7667ff;
@@ -134,7 +139,7 @@ td>button:active {
 .quantnumber {
     width: 28px;
     height: 32px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 5px 0px 5px;
     display: inline-block;
     font-size: x-large;
 }
@@ -144,6 +149,192 @@ td>button:active {
     margin-top: 0;
 }
 
-#tableTotal tr {
+#tableTotal .tr {
     border-bottom: none;
+}
+
+#address-info{
+    margin: 80px auto 0 auto;
+    width: 80%;
+    height: 40em;
+    /*border: 5px solid black;*/
+}
+
+
+#address-block{
+    width: 100%;
+    height:32em;
+    padding-top: 20px;
+    background-color: var(--purpleBlue);
+    border-radius: 80px 4px 80px 4px;
+    text-align: center;
+}
+
+.icon{
+    width: 80px;
+    height: 80px;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+label{
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    height: 40px;
+    padding: 0 10px 0 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #acabab;
+    background-color: #e9e8e8;
+    color: rgb(152, 46, 240);
+    text-align: center;
+}
+
+input:focus{
+    outline: 3px solid rgb(198, 128, 255);
+}
+
+#block1{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border: 1px solid black;*/
+}
+
+#block1 div:nth-child(1){
+    width: 60%;
+   /* border: 1px solid black;*/
+}
+
+#block1 div:nth-child(1) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#block1 div:nth-child(2){
+    width: 35%;
+    /*border: 1px solid black;*/
+}
+
+#block1 div:nth-child(2) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+#block2{
+    margin: 30px auto 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border: 1px solid black;*/
+}
+
+#block2 div:nth-child(1){
+    width: 50%;
+    /*border: 1px solid black;*/
+}
+
+#block2 div:nth-child(1) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#block2 div:nth-child(2){
+    width: 15%;
+    /*border: 1px solid black;*/
+}
+
+#block2 div:nth-child(2) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#block2 div:nth-child(3){
+    width: 30%;
+   /* border: 1px solid black;*/
+}
+
+#block2 div:nth-child(3) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+#block3{
+    margin: 30px auto 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   /* border: 1px solid black;*/
+}
+
+#block3 div:nth-child(1){
+    width: 40%;
+    /*border: 1px solid black;*/
+}
+
+#block3 div:nth-child(1) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#block3 div:nth-child(2){
+    width: 30%;
+    /*border: 1px solid black;*/
+}
+
+#block3 div:nth-child(2) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+#block3 div:nth-child(3){
+    width: 25%;
+    /*border: 1px solid black;*/
+}
+
+#block3 div:nth-child(3) input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+#btn-finalizar{
+    margin: 30px auto 50px auto;
+    display: block;
+    width: 220px;
+    height: 60px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right,#8375ff, #9553ff);
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#btn-finalizar:hover{
+    background: linear-gradient(to left, #bf75ff, #8d53ff);;
+    color: white; 
 }

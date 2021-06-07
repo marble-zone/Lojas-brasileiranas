@@ -10,6 +10,14 @@ btn.addEventListener('click', (event) => {
 })
 );*/
 
+function decreaseObjSize(){
+   let height = JSON.parse(sessionStorage.getItem('cartSize'));
+   height = height - 6.3;
+   console.log("bbb"+ height);
+   sessionStorage.setItem('cartSize', JSON.stringify(height));
+   localStorage.setItem('cartSize', JSON.stringify(height));
+}
+
 function deletarLinha(event) {
    if(!confirm("!! ESTÁ AÇÃO REMOVERÁ O PRODUTO DO SEU CARRINHO !!\n\nVocê tem certeza disto?"))
       return;
@@ -24,4 +32,5 @@ function deletarLinha(event) {
    sessionStorage.setItem('products', JSON.stringify(carrinho));
    const util = new UTIL();
    carrinho.length ? util.carrinhoNaoVazio() : util.carrinhoVazio();
+   decreaseObjSize();
 }

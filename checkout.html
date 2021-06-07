@@ -3,7 +3,37 @@
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 <div id="container">
-  <table class="cart-table" id="tablePrincipal">
+  <div id="cart-table">
+    <div class="thead">
+      <p class="th th1"> Produto </p>
+      <p class="th th2"> Preço Unit. </p>
+      <p class="th th3"> Qtd. </p>
+      <p class="th th4"> Total </p>
+    </div>
+    <div id="tablePrincipal">
+      <!--<div class="tr">
+        <div class="td1">
+          <button class="btn-excluirItem marginBtn">X</button>
+          <img class="imgproduct" src="images/products/bone.png">
+        </div>
+        <p class="td2 marginText"> Boné </p>
+        <p class="td3 marginText"> R$10,00 </p>
+        <div class="td4 marginBtn">
+          <button class="plusbtt" >+</button>
+          <p class="quantnumber" >1</p>
+          <button class="minusbtt" >-</button>
+        </div>
+        <p class="td5 marginText"> R$1.6,00</p>
+      </div>-->
+    </div>
+    <div class="thead" id="tableTotal">
+      <p class="th th1"> Total </p>
+      <p class="th th2"> </p>
+      <p id="quantTotal" class="th th3"> 50 </p>
+      <p class="th th4"> R$12.786,00 </p>
+    </div>
+
+    <!--<table class="cart-table" id="tablePrincipal">
     <thead>
       <th></th>
       <th>Produto</th>
@@ -12,7 +42,7 @@
       <th>Total</th>
     </thead>
     <tbody>
-      <!--<tr>
+      <tr>
         <td><button class="btn-excluirItem">X</button></td>
         <td class="product">
           <img class="imgproduct" src="">
@@ -25,7 +55,7 @@
           <button class="minusbtt">-</button>
         </td>
         <td></td>
-      </tr>-->
+      </tr>
     </tbody>
   </table>
   <table id="tableTotal" class="cart-table">
@@ -36,9 +66,75 @@
       <th id="quantTotal"></th>
       <th></th>
     </thead>
-  </table>
+  </table>-->
+  </div>
+  <form action="#" id="address-info">
+    <div id="address-block">
+      <span class="iconify icon" data-icon="mdi-truck-fast" data-inline="false"></span>
+      <br>
+      <h2>Dados de entrega: </h2>
+      <br>
+
+      <div id="block1">
+        <div>
+          <label for="nome-completo">Nome Completo</label>
+          <br>
+          <input type="text" name="nome" placeholder="Nome" id="nome-completo" maxlength="60" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <br>
+          <input type="email" name="email" placeholder="Email" id="email"  maxlength="60" required>
+        </div>
+      </div>
+
+      <div id="block2">
+        <div>
+          <label for="rua">Rua</label>
+          <br>
+          <input type="text" name="rua" placeholder="Rua" id="rua" maxlength="60" required>
+        </div>
+
+        <div>
+          <label for="num">Nº</label>
+          <br>
+          <input type="number" name="num" placeholder="Nº" id="num" min="0" max ="99999" required>
+        </div>
+
+        <div>
+          <label for="cep">CEP</label>
+          <br>
+          <input type="number" name="cep" placeholder="CEP" id="cep" min="0"  max="99999999" required>
+        </div>
+      </div>
+
+      <div id="block3">
+        <div>
+          <label for="bairro">Bairro</label>
+          <br>
+          <input type="text" name="bairro" placeholder="Bairro" id="bairro" maxlength="40" required>
+        </div>
+
+        <div>
+          <label for="cidade">Cidade</label>
+          <br>
+          <input type="text" name="cidade" placeholder="Cidade" id="cidade" maxlength="40" required>
+        </div>
+
+        <div>
+          <label for="estado">Estado</label>
+          <br>
+          <input type="text" name="estado" placeholder="Estado" id="estado" maxlength="20" required>
+        </div>
+      </div>
+
+    </div>
+    <input type="submit" value="Finalizar Compra" id="btn-finalizar">
+  </form>
 </div>
+
 <script type="text/javascript" src="js/util.js"> </script>
 <script type="text/javascript" src="js/shooping/addShopCart.js"> </script>
 <script type="text/javascript" src="js/deleteRow.js"> </script>
 <script type="text/javascript" src="js/changeQuantandTotal.js"> </script>
+<script type="text/javascript" src="js/shooping/btnfinalizar.js"> </script>

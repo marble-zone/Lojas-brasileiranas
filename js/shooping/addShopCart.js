@@ -4,67 +4,81 @@ window.addEventListener('load', function init() {
         let itens = JSON.parse(sessionStorage.getItem('products'));
         let tam = itens.length;
         for (let i = 0; i < tam; i++) {
-            let tr = document.createElement("tr");
+            // HTML
+            let tr = document.createElement("div");
+            tr.classList.add("tr");
+            
             let td = [];
-            td[0] = document.createElement("td");
-            td[1] = document.createElement("td");
-            td[1].classList.add("product");
-            td[2] = document.createElement("td");
-            td[3] = document.createElement("td");
-            td[4] = document.createElement("td");
+
+            td[0] = document.createElement("div");
+            td[0].classList.add("td1");
+            tr.appendChild(td[0]);
+
+            let excluir = document.createElement("button");
+            excluir.classList.add("btn-excluirItem");
+            excluir.classList.add("marginBtn");
+            excluir.innerHTML = "&#215;";
+            td[0].appendChild(excluir);
 
             let img = document.createElement("img");
             img.classList.add("imgproduct");
+            td[0].appendChild(img);
 
-            let name = document.createElement("p");
-            name.classList.add("textproduct");
-            let quant = document.createElement("p");
-            quant.classList.add("quantnumber");
+            td[1] = document.createElement("p");
+            td[1].classList.add("td2"); 
+            td[1].classList.add("marginText");
+            tr.appendChild(td[1]);
+
+            td[2] = document.createElement("p");
+            td[2].classList.add("td3");
+            td[2].classList.add("marginText");
+            tr.appendChild(td[2]);
+
+            td[3] = document.createElement("div");
+            td[3].classList.add("td4"); 
+            td[3].classList.add("marginBtn");
+            tr.appendChild(td[3]);
 
             let plus = document.createElement("button");
             plus.classList.add("plusbtt");
+            plus.innerHTML = "+";
+            td[3].appendChild(plus);
+
+            let quantnumber = document.createElement("p");
+            quantnumber.classList.add("quantnumber");
+            td[3].appendChild(quantnumber);
+
             let minus = document.createElement("button");
             minus.classList.add("minusbtt");
-            let excluir = document.createElement("button");
-            excluir.classList.add("btn-excluirItem");
+            minus.innerHTML = "-";
+            td[3].appendChild(minus);
+
+            td[4] = document.createElement("p");
+            td[4].classList.add("td5");
+            td[4].classList.add("marginText");
+            tr.appendChild(td[4]);
 
             // add listeners
             plus.addEventListener('click', (event) => increaseQuant(event));
             minus.addEventListener('click', (event) => decreaseQuant(event));
             excluir.addEventListener('click', (event) => deletarLinha(event));
 
-            //quant.addEventListener('change', (event) => calcularTotal(event));
-
-            // appends
-            for (let index = 0; index < td.length; index++)
-                tr.appendChild(td[index]);
-
-            td[0].appendChild(excluir);
-
-            td[1].appendChild(img);
-            td[1].appendChild(name);
-
-            td[3].appendChild(plus);
-            td[3].appendChild(quant);
-            td[3].appendChild(minus);
-
-            plus.innerHTML = "+";
-            minus.innerHTML = "-";
-            excluir.innerHTML = "&#215;";
-
-            document.getElementsByTagName("tbody")[0].appendChild(tr);
-
             // add produto
             img.src = (itens[i])[0];
-            name.innerHTML = (itens[i])[1];
+            td[1].innerHTML = (itens[i])[1];
             td[2].innerHTML = util.reais.format((itens[i])[2]);
-            quant.innerHTML = `${(itens[i])[3]}`;
+            quantnumber.innerHTML = `${(itens[i])[3]}`;
             td[4].innerHTML = util.reais.format((itens[i])[4]);
 
+            // append final
+            document.getElementById("tablePrincipal").appendChild(tr);
         }
         tam > 0 ? util.carrinhoNaoVazio() : util.carrinhoVazio();
             
     }else util.carrinhoVazio();
-    if (localStorage['quantProds'])
+    if (localStorage['quantProds']){
+        let prods = JSON.parse(localStorage.getItem('quantProds'));
+        sessionStorage.setItem('quantProds', JSON.stringify(prods));
         localStorage.setItem('quantProds', JSON.stringify(0));
+    }
 })

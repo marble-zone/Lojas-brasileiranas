@@ -81,11 +81,6 @@ main {
     background-color: rgb(198, 128, 255);
 }
 
-object {
-    width: 100%;
-    height: 1200px;
-}
-
 footer {
     grid-column-start: 1;
     grid-column-end: 3;
