@@ -6,6 +6,7 @@
 
 h3 {
     color: rgb(233, 230, 255);
+    font-size: 20px;
 }
 
 .flex-container {
@@ -35,7 +36,7 @@ h3 {
 
 .price {
     color: whitesmoke;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
