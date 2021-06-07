@@ -100,7 +100,7 @@ var PRODUTOS = [{
 {
     "nome": "Ventilador",
     "preco": 80,
-    "img": `${urlBase}Ventilador.png`,
+    "img": `${urlBase}ventilador.png`,
     "cat": 'E'
 },
 {
