@@ -184,7 +184,8 @@ label {
     font-weight: bold;
 }
 
-input {
+.address {
+    margin-top: 10px;
     height: 40px;
     padding: 0 10px 0 10px;
     font-size: 1em;
@@ -195,7 +196,7 @@ input {
     text-align: center;
 }
 
-input:focus {
+.address:focus {
     outline: 3px solid rgb(198, 128, 255);
 }
 

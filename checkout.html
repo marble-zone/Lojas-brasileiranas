@@ -78,58 +78,80 @@
       <div id="block1">
         <div>
           <label for="nome-completo">Nome Completo</label>
-          <br>
-          <input type="text" name="nome" placeholder="Nome" id="nome-completo" maxlength="60" required>
+          <input class="address" type="text" name="nome" placeholder="Nome" id="nome-completo" maxlength="60" required>
         </div>
         <div>
           <label for="email">Email</label>
-          <br>
-          <input type="email" name="email" placeholder="Email" id="email"  maxlength="60" required>
+          <input class="address" type="email" name="email" placeholder="Email" id="email"  maxlength="60" required>
         </div>
       </div>
 
       <div id="block2">
         <div>
           <label for="rua">Rua</label>
-          <br>
-          <input type="text" name="rua" placeholder="Rua" id="rua" maxlength="60" required>
+          <input class="address" type="text" name="rua" placeholder="Rua" id="rua" maxlength="60" required>
         </div>
 
         <div>
           <label for="num">Nº</label>
-          <br>
-          <input type="number" name="num" placeholder="Nº" id="num" min="0" max ="99999" required>
+          <input class="address" type="number" name="num" placeholder="Nº" id="num" min="0" max ="99999" required>
         </div>
 
         <div>
           <label for="cep">CEP</label>
-          <br>
-          <input type="text" name="cep" placeholder="CEP" id="cep" min="0"  max="99999999" required>
+          <input class="address" type="text" name="cep" placeholder="CEP" id="cep" min="0"  max="99999999" required>
         </div>
       </div>
 
       <div id="block3">
         <div>
           <label for="bairro">Bairro</label>
-          <br>
-          <input type="text" name="bairro" placeholder="Bairro" id="bairro" maxlength="40" required>
+          <input class="address" type="text" name="bairro" placeholder="Bairro" id="bairro" maxlength="40" required>
         </div>
 
         <div>
           <label for="cidade">Cidade</label>
-          <br>
-          <input type="text" name="cidade" placeholder="Cidade" id="cidade" maxlength="40" required>
+          <input class="address" type="text" name="cidade" placeholder="Cidade" id="cidade" maxlength="40" required>
         </div>
 
         <div>
           <label for="estado">Estado</label>
           <br>
-          <input type="text" name="estado" placeholder="Estado" id="estado" maxlength="20" required>
+          <!--<input type="text" name="estado" placeholder="Estado" id="estado" maxlength="20" required>-->
+          <select class="address" name="estado" id="estado">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
         </div>
       </div>
 
     </div>
-    <input type="submit" value="Finalizar Compra" id="btn-finalizar">
+    <input type="submit" value="Finalizar Compra  &#10004;" id="btn-finalizar">
   </form>
 </div>
 
