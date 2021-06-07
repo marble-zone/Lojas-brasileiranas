@@ -14,3 +14,4 @@ function onlyNumbers(event) {
 }
 
 document.getElementById("cep").addEventListener("keypress", (event) => onlyNumbers(event));
+document.getElementById("cep").addEventListener("click", (event) => onlyNumbers(event));

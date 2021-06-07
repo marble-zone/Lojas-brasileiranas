@@ -99,15 +99,6 @@ aside p {
     -webkit-text-fill-color: transparent;
 }*/
 
-.plabel {
-    font-weight: 600;
-    color: rgb(255, 232, 255);
-    background: -webkit-linear-gradient(white, rgb(255, 235, 255));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 aside .text-label {
     margin-bottom: 3px;
 }
@@ -119,6 +110,8 @@ input[type="number"] {
     background-color: #e9e8e8;
     color: rgb(152, 46, 240);
     text-align: center;
+    width: 80%;
+    height: 16px;
 }
 
 main {
@@ -221,6 +214,16 @@ footer {
     border-color: rgb(212, 169, 253);
     background-color: rgb(198, 83, 255);
     cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+#bkUpbtt:hover {
+    background-color: rgb(201, 98, 253);
+}
+
+#bkUpbtt:active {
+    background-color: rgb(192, 65, 255);
 }
 
 .iconheader {
@@ -260,6 +263,15 @@ footer {
 
 .category:hover {
     opacity: 1;
+}
+
+.plabel {
+    font-weight: 600;
+    color: rgb(255, 232, 255);
+    background: -webkit-linear-gradient(white, rgb(255, 235, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .cat-selected {

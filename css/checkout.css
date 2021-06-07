@@ -153,39 +153,38 @@ div>button:active {
     border-bottom: none;
 }
 
-#address-info{
+#address-info {
     margin: 80px auto 0 auto;
     width: 80%;
     height: 40em;
     /*border: 5px solid black;*/
 }
 
-
-#address-block{
+#address-block {
     width: 100%;
-    height:32em;
+    height: 32em;
     padding-top: 20px;
     background-color: var(--purpleBlue);
     border-radius: 80px 4px 80px 4px;
     text-align: center;
 }
 
-.icon{
+.icon {
     width: 80px;
     height: 80px;
     color: white;
 }
 
-h2{
+h2 {
     color: white;
 }
 
-label{
+label {
     color: white;
     font-weight: bold;
 }
 
-input{
+input {
     height: 40px;
     padding: 0 10px 0 10px;
     font-size: 1em;
@@ -196,11 +195,11 @@ input{
     text-align: center;
 }
 
-input:focus{
+input:focus {
     outline: 3px solid rgb(198, 128, 255);
 }
 
-#block1{
+#block1 {
     margin: 0 auto;
     width: 90%;
     display: flex;
@@ -209,33 +208,27 @@ input:focus{
     /*border: 1px solid black;*/
 }
 
-#block1 div:nth-child(1){
+#block1 div:nth-child(1) {
     width: 60%;
-   /* border: 1px solid black;*/
+    /* border: 1px solid black;*/
 }
 
-#block1 div:nth-child(1) input{
+#block1 div:nth-child(1) input {
     margin-top: 10px;
     width: 100%;
 }
 
-#block1 div:nth-child(2){
+#block1 div:nth-child(2) {
     width: 35%;
     /*border: 1px solid black;*/
 }
 
-#block1 div:nth-child(2) input{
+#block1 div:nth-child(2) input {
     margin-top: 10px;
     width: 100%;
 }
 
-
-
-
-
-
-
-#block2{
+#block2 {
     margin: 30px auto 0 auto;
     width: 90%;
     display: flex;
@@ -244,83 +237,76 @@ input:focus{
     /*border: 1px solid black;*/
 }
 
-#block2 div:nth-child(1){
+#block2 div:nth-child(1) {
     width: 50%;
     /*border: 1px solid black;*/
 }
 
-#block2 div:nth-child(1) input{
+#block2 div:nth-child(1) input {
     margin-top: 10px;
     width: 100%;
 }
 
-#block2 div:nth-child(2){
+#block2 div:nth-child(2) {
     width: 15%;
     /*border: 1px solid black;*/
 }
 
-#block2 div:nth-child(2) input{
+#block2 div:nth-child(2) input {
     margin-top: 10px;
     width: 100%;
 }
 
-#block2 div:nth-child(3){
+#block2 div:nth-child(3) {
     width: 30%;
-   /* border: 1px solid black;*/
+    /* border: 1px solid black;*/
 }
 
-#block2 div:nth-child(3) input{
+#block2 div:nth-child(3) input {
     margin-top: 10px;
     width: 100%;
 }
 
-
-
-
-
-
-
-#block3{
+#block3 {
     margin: 30px auto 0 auto;
     width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   /* border: 1px solid black;*/
+    /* border: 1px solid black;*/
 }
 
-#block3 div:nth-child(1){
+#block3 div:nth-child(1) {
     width: 40%;
     /*border: 1px solid black;*/
 }
 
-#block3 div:nth-child(1) input{
+#block3 div:nth-child(1) input {
     margin-top: 10px;
     width: 100%;
 }
 
-#block3 div:nth-child(2){
+#block3 div:nth-child(2) {
     width: 30%;
     /*border: 1px solid black;*/
 }
 
-#block3 div:nth-child(2) input{
+#block3 div:nth-child(2) input {
     margin-top: 10px;
     width: 100%;
 }
 
-#block3 div:nth-child(3){
+#block3 div:nth-child(3) {
     width: 25%;
     /*border: 1px solid black;*/
 }
 
-#block3 div:nth-child(3) input{
+#block3 div:nth-child(3) input {
     margin-top: 10px;
     width: 100%;
 }
 
-
-#btn-finalizar{
+#btn-finalizar {
     margin: 30px auto 50px auto;
     display: block;
     width: 220px;
@@ -328,13 +314,13 @@ input:focus{
     border-radius: 50px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(to right,#8375ff, #9553ff);
+    background: linear-gradient(to right, #8375ff, #9553ff);
     border: 0;
     font-size: 1em;
     cursor: pointer;
 }
 
-#btn-finalizar:hover{
-    background: linear-gradient(to left, #bf75ff, #8d53ff);;
-    color: white; 
+#btn-finalizar:hover {
+    background: linear-gradient(to left, #8375ff, #9553ff);
+    color: white;
 }
