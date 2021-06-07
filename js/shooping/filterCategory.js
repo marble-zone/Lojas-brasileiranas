@@ -114,4 +114,6 @@ function validate(evt) {
       theEvent.returnValue = false;
       if(theEvent.preventDefault) theEvent.preventDefault();
     }
+    if (theEvent.target.value >= 1000)
+        theEvent.preventDefault();
   }

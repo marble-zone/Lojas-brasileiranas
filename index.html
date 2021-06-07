@@ -51,32 +51,32 @@
 
                 <div class="input">
                     <input type="checkbox" id="checkAlimento" name="alimento" value='A' onchange="filterCategory(this)">
-                    <label for="checkAlimento">Alimento e bebidas</label>
+                    <label class="plabel" for="checkAlimento">Alimento e bebidas</label>
                 </div>
 
                 <div class="input">
                     <input type="checkbox" id="checkR" name="Roupas" value='R' onchange="filterCategory(this)">
-                    <label for="checkR">Roupas</label>
+                    <label class="plabel" for="checkR">Roupas</label>
                 </div>
 
                 <div class="input">
                     <input type="checkbox" id="checkM" name="Mobilia" value='M' onchange="filterCategory(this)">
-                    <label for="checkM">Mobília</label>
+                    <label class="plabel" for="checkM">Mobília</label>
                 </div>
 
                 <div class="input">
                     <input type="checkbox" id="checkI" name="Informatica" value='I' onchange="filterCategory(this)">
-                    <label for="checkI">Informática</label>
+                    <label class="plabel" for="checkI">Informática</label>
                 </div>
 
                 <div class="input">
                     <input type="checkbox" id="checkE" name="Eletrodomesticos" value='E' onchange="filterCategory(this)">
-                    <label for="checkE">Eletrodomésticos</label>
+                    <label class="plabel" for="checkE">Eletrodomésticos</label>
                 </div>
 
                 <div class="input">
                     <input type="checkbox" id="checkC" name="Cosmeticos" value='C' onchange="filterCategory(this)">
-                    <label for="checkC">Cosméticos</label>
+                    <label class="plabel" for="checkC">Cosméticos</label>
                 </div>
             </div>
 
@@ -84,13 +84,13 @@
                 <h3>Filtrar por preço</h3>
 
                 <div class="input">
-                    <p class="text-label">Preco mínimo</p>
-                    <input type="number" id="precoMin" onkeypress='validate(event)'>
+                    <p class="text-label plabel">Preco mínimo</p>
+                    <input type="number" min="0" max="9999" id="precoMin" onkeypress='validate(event)'>
                 </div>
 
                 <div class="input">
-                    <p class="text-label">Preco máximo</p>
-                    <input type="number" id="precoMax" onkeypress='validate(event)'>
+                    <p class="text-label plabel">Preco máximo</p>
+                    <input type="number" min="0" max="9999" id="precoMax" onkeypress='validate(event)'>
                 </div>
 
                 <!--
@@ -111,7 +111,7 @@
                 -->
             </div>
 
-            <button id="botao-filtrar" onclick="storeValues()">FILTRAR</button>
+            <button id="botao-filtrar" onclick="storeValues()">FILTRAR &#10552;</button>
 
             <!--
             <div>

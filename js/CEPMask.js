@@ -1,5 +1,5 @@
 function onlyNumbers(event) {
-    let cep = document.getElementById("cep");
+    let cep = event.target;
     if (cep.value.length == 5){
         cep.value += '-';
         return;
