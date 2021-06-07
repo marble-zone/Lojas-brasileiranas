@@ -51,7 +51,7 @@ function returnHome() {
 
         let obj = document.querySelector('object');
         obj.style.width = "100%";
-        obj.style.height = "50em";
+        obj.style.height = "132em";
         obj.style.overflow = "hidden";
         localStorage.removeItem('return');
     }
