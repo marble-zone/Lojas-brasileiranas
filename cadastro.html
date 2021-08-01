@@ -20,7 +20,7 @@
                 <p class="label"> Email </p>
                 <input type="email" placeholder="Email" required>
                 <p class="label"> CPF </p>
-                <input type="text" placeholder="CPF" required>
+                <input id="cpf" type="text" placeholder="CPF" required>
 
                 <div>
                     <p class="label"> Rua </p>
@@ -67,10 +67,13 @@
                         <option value="TO">TO</option>
                      </select>
                     <p class="label"> CEP </p>
-                    <input type="text" placeholder="CEP" required>
+                    <input id="cep" type="text" placeholder="CEP" required>
                 </div>
                 <button id="subbtt" type="submit"> ENTRAR </button>
             </div>
     </main>
 </body>
 </html>
+
+<script type="text/javascript" src="js/CEPMask.js"></script>
+<script type="text/javascript" src="js/CPFMask.js"></script>
