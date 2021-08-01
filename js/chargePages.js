@@ -65,7 +65,7 @@ function changeContent(valor) {
                 AsideOff();
             break;*/
         case "cart": 
-            document.getElementById("content").innerHTML = '<object type="text/html" data="checkout.html"></object>';
+            document.getElementById("content").innerHTML = '<object type="text/html" data="checkout.php"></object>';
             pagename.innerHTML = `${emote} Carrinho de compras ${emote}`
             AsideOff();
             objSizeCart();

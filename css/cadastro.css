@@ -14,8 +14,7 @@ main {
     width: 900px;
     /*height: 560px;*/
     border-radius: 15px 15px 15px 15px;
-    margin: 50px auto 0 auto;
-    margin-bottom: 30px;
+    margin: 50px auto 50px auto;
     border: 3px outset;
     border-color: rgb(218, 190, 253);
 }

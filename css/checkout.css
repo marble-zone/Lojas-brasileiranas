@@ -325,3 +325,48 @@ label {
     background: linear-gradient(to left, #8375ff, #9553ff);
     color: white;
 }
+
+#login{
+    width: 40%;
+    height: 35em;
+    margin: 5em auto 0 auto;
+    border-radius: 20px 20px 20px 20px;
+    background-color: var(--purpleBlue);
+    text-align: center;
+}
+
+#key{
+    margin-top: 50px;
+}
+
+#login h1,h2{
+    margin-top: 20px;
+    color: white;
+}
+
+#login h3{
+    color: white;
+    margin: 40px auto 40px auto;
+}
+
+#login a {
+    margin: 30px auto 0 auto;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 220px;
+    height: calc(60px - 15px);
+    padding-top: 15px;
+    border-radius: 50px;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #9853e7, #b89ae7);
+    cursor: pointer;
+}
+
+#login a:hover {
+    background: linear-gradient(to left, #9853e7, #b189f1);
+    color: white;
+}

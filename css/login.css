@@ -12,17 +12,38 @@ body {
 main {
     background-color: rgb(200, 173, 233);
     width: 600px;
-    height: 560px;
+    height: 650px;
     border-radius: 15px 15px 15px 15px;
-    margin: 50px auto 0 auto;
+    margin: 60px auto 0 auto;
     border: 3px outset;
     border-color: rgb(218, 190, 253);
 }
 
-h1 {
-    margin: 0;
-    margin-left: 43%;
+#title {
+    width: 60%;
+    color: rgb(171, 58, 236);
+    font-size: 40px;
+    margin: 0.6em auto 0 auto;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-color: rgb(186, 84, 245);
+    border-radius: 6px 4px 6px 4px;
+    padding-bottom: 9px;
+    padding-top: 2px;
+    background: linear-gradient(to bottom, rgb(116, 66, 255), rgb(206, 58, 236));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#login-text {
+    width: 60%;
+    margin: 0.3em auto 0 auto;
     padding-top: 30px;
+    text-align: center;
 }
 
 a {
