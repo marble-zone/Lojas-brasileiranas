@@ -16,25 +16,26 @@ session_start();
 
 <body>
     <main>
-        <form action="php/autenticacao.php" method="POST"></form>
-        <h1 id="login-text"> Login </h1>
-        <h1 id="title"> Lojas Brasileiranas </h1>
-        <div id="divinputs">
-            <p class="label"> USUÁRIO </p>
-            <input name="email" type="email" placeholder="Digite seu email..." required>
-            <p class="label"> SENHA </p>
-            <input name="password" type="password" placeholder="Digite sua senha..." required>
-            <a href="index.html" target="_blank">
-                <p class="links"> Esqueceu a Senha? </p>
+        <form action="php/autenticacao.php" method="POST">
+            <h1 id="login-text"> Login </h1>
+            <h1 id="title"> Lojas Brasileiranas </h1>
+            <div id="divinputs">
+                <p class="label"> USUÁRIO </p>
+                <input name="email" type="email" placeholder="Digite seu email..." required>
+                <p class="label"> SENHA </p>
+                <input name="password" type="password" placeholder="Digite sua senha..." required>
+                <a href="index.html" target="_blank">
+                    <p class="links"> Esqueceu a Senha? </p>
+                </a>
+                <?php if (isset($_SESSION["erro"])): ?>
+                    <h3 style="margin: 30px 0 20px 0;padding-left: 20px;color: rgb(116, 66, 255);" >Erro! Login ou Senha fornecidos estão incorretos!!!</h3>
+                <?php unset($_SESSION["erro"]); endif; ?>
+                <button id="subbtt" type="submit"> ENTRAR </button>
+            </div>
+            <a href="cadastro.php">
+                <p id="linkcad" class="links"> Clique aqui para se cadastrar</p>
             </a>
-            <?php if (isset($_SESSION["erro"])): ?>
-                   <h3 style="margin: 30px 0 20px 0;padding-left: 20px;color: rgb(116, 66, 255);" >Erro! Login ou Senha fornecidos estão incorretos!!!</h3>
-            <?php unset($_SESSION["erro"]); endif; ?>
-            <button id="subbtt" type="submit"> ENTRAR </button>
-        </div>
-        <a href="cadastro.php">
-            <p id="linkcad" class="links"> Clique aqui para se cadastrar</p>
-        </a>
+        </form>
     </main>
 </body>
 

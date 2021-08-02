@@ -11,7 +11,7 @@ function AsideOff() {
 }
 
 function CallHome() {
-    document.getElementById("content").innerHTML = '<object type="text/html" data="home.html"></object>';
+    document.getElementById("content").innerHTML = '<object type="text/html" data="home.php"></object>';
     document.getElementById("pagename").innerHTML = `${util.emoji} Bem vindo! Aproveite nossas ofertas do dia ${util.emoji}`;
 }
 
@@ -54,7 +54,7 @@ function changeContent(valor) {
     pagename = document.getElementById("pagename");
     switch (valor) {
         case "home": 
-            document.getElementById("content").innerHTML = '<object type="text/html" data="home.html"></object>';
+            document.getElementById("content").innerHTML = '<object type="text/html" data="home.php"></object>';
             pagename.innerHTML = `${emote} Produtos à venda ${emote}`
             AsideOn();
             objSizeHome();

@@ -1,17 +1,17 @@
 <?php
 
-require_once "connection.php";
+require_once "php/connection.php";
 
 if (isset($_SESSION["logado"])) {
   $query = "SELECT nome,senha,cpf,email,logradouro,numero,bairro,cidade,estado,cep FROM cliente WHERE id_cliente = {$_SESSION["logado"]}";
-  $result = $mysqli->query($query);
+  $result = $conn->query($query);
+}
 
-  if ($result) :
-    while ($row = $result->fetch_assoc())
-
+  if ($result):
+    while ($row = $result->fetch_assoc()):
 ?>
 
-    <form action="cadastro.php" id="address-info">
+    <form id="address-info">
       <div id="address-block">
         <span class="iconify icon" data-icon="mdi-truck-fast" data-inline="false"></span>
         <br>
@@ -97,11 +97,11 @@ if (isset($_SESSION["logado"])) {
       <input type="submit" value="Finalizar Compra  &#10004;" id="btn-finalizar">
     </form>
 
+  <?php
+      endwhile;
+    endif;
+
+  ?>
+
     <script type="text/javascript" src="js/shooping/btnfinalizar.js"> </script>
     <script type="text/javascript" src="js/CEPMask.js"> </script>
-
-<?php
-endif;
-}
-
-?>

@@ -44,7 +44,7 @@ function returnHome() {
     if (localStorage['return']) {
         let emote = util.emoji;
 
-        document.getElementById("content").innerHTML = '<object type="text/html" data="home.html"></object>';
+        document.getElementById("content").innerHTML = '<object type="text/html" data="home.php"></object>';
         document.getElementById("pagename").innerHTML = `${util.emoji} Bem vindo! Aproveite nossas ofertas do dia ${util.emoji}`;
         document.getElementsByTagName("aside")[0].style.display = "block";
         document.getElementsByTagName("main")[0].style.gridColumnStart = "2";

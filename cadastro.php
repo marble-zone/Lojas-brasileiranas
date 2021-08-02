@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
     <main>
-        <form action="php/insertUser.php" method="POST"></form>
+        <form action="php/insertUser.php" method="POST">
             <h1> Cadastro </h1>
             <div id="divinputs">
                 <p class="label"> Nome completo </p>
@@ -76,6 +76,7 @@ session_start();
                    <?php unset($_SESSION["erro"]); endif; ?>
                    <button id="subbtt" type="submit"> ENTRAR </button>
             </div>
+        </form>
     </main>
 </body>
 </html>
