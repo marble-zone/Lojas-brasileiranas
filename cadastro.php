@@ -15,6 +15,9 @@ session_start();
 <body>
     <main>
         <form action="php/insertUser.php" method="POST">
+            <?php if (isset($_SESSION["erro"])): ?>
+            <h3 style="margin: 30px 0 20px 0;padding-left: 25%;color: rgb(116, 66, 255);" >Erro! Já existe um cliente cadastrado com este CPF!!!</h3>
+            <?php unset($_SESSION["erro"]); endif; ?>
             <h1> Cadastro </h1>
             <div id="divinputs">
                 <p class="label"> Nome completo </p>
@@ -30,7 +33,7 @@ session_start();
                     <p class="label"> Logradouro </p>
                     <input name="logradouro" type="text" placeholder="Rua" required>
                     <p class="label"> Número </p>
-                    <input name="numero" type="text" placeholder="Número do endereço" required>
+                    <input name="numero" type="number" placeholder="Número do endereço" required>
                 </div>
                 <div>
                     <p class="label"> Bairro </p>
@@ -71,9 +74,6 @@ session_start();
                     <p class="label"> CEP </p>
                     <input name="cep" id="cep" type="text" placeholder="CEP" required>
                 </div>
-                   <?php if (isset($_SESSION["erro"])): ?>
-                   <h3 style="margin: 30px 0 20px 0;padding-left: 150px;color: rgb(116, 66, 255);" >Erro! Já existe um cliente cadastrado com este CPF!!!</h3>
-                   <?php unset($_SESSION["erro"]); endif; ?>
                    <button id="subbtt" type="submit"> ENTRAR </button>
             </div>
         </form>
