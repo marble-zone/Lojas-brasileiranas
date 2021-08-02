@@ -13,11 +13,12 @@ if (isset($_POST['name'])) {
             header("Location: cadastro.php");
         }
         else{
+            $row = $result->fetch_assoc();
             $cripto = md5($_POST['password']);
             $query = "INSERT INTO cliente (nome,senha,cpf,email,logradouro,numero,bairro,cidade,estado,cep) 
                       VALUES ('{$_POST['name']}','{$cripto}','{$cpf}','{$_POST['email']}','{$_POST['logradouro']}',{$_POST['numero']},'{$_POST['bairro']}','{$_POST['city']}','{$_POST['uf']}','{$_POST['cep']}')";
             $mysqli->query($query);
-            $_SESSION["logado"] = true;
+            $_SESSION["logado"] = $row["id_cliente"];
             header("Location: index.php");
         }
     }

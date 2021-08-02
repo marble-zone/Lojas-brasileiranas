@@ -76,7 +76,7 @@ session_start();
 
   <?php
   if (isset($_SESSION["logado"])) {
-      require 'address.html';
+      require 'address.php';
   } else {
       require 'loginBox.html';} ?>
 

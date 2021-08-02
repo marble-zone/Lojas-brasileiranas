@@ -13,7 +13,8 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['cpf']))
     $result = $mysqli->query($query);
     
     if($result){
-        $_SESSION["logado"] = true;
+        $row = $result->fetch_assoc();
+        $_SESSION["logado"] = $row["id_cliente"];
         header("Location: index.php");
     }
     else{
