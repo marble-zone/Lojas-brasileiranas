@@ -1,11 +1,11 @@
 let urlBase = "images/products/"
 /* Categorias
-    C: cosméticos
-    A: alimentos e bebidas
-    M: mobília
-    E: eletrodomesticos
-    I: informática
-    R: roupas
+    C: cosmetico
+    A: alimento
+    M: mobilia
+    E: eletrodomestico
+    I: informatica
+    R: roupa
 */
 var PRODUTOS = [{
     "nome": "Ovo",
