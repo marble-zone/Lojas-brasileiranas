@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +18,25 @@
             <h1> Cadastro </h1>
             <div id="divinputs">
                 <p class="label"> Nome completo </p>
-                <input type="text" placeholder="Nome completo" required>
+                <input name="name" type="text" placeholder="Nome completo" required>
                 <p class="label"> Senha </p>
-                <input type="password" placeholder="Senha" required>
+                <input name="password" type="password" placeholder="Senha" required>
                 <p class="label"> Email </p>
-                <input type="email" placeholder="Email" required>
+                <input name="email" type="email" placeholder="Email" required>
                 <p class="label"> CPF </p>
-                <input id="cpf" type="text" placeholder="CPF" required>
+                <input name="cpf" id="cpf" type="text" placeholder="CPF" required>
 
                 <div>
-                    <p class="label"> Rua </p>
-                    <input type="text" placeholder="Rua" required>
+                    <p class="label"> Logradouro </p>
+                    <input name="logradouro" type="text" placeholder="Rua" required>
                     <p class="label"> Número </p>
-                    <input type="text" placeholder="Número do endereço" required>
-                    <p class="label"> Complemento </p>
-                    <input type="text" placeholder="Complemento, se houver">
+                    <input name="numero" type="text" placeholder="Número do endereço" required>
                 </div>
                 <div>
                     <p class="label"> Bairro </p>
-                    <input type="text" placeholder="Bairro" required>
+                    <input name="bairro" type="text" placeholder="Bairro" required>
                     <p class="label"> Cidade </p>
-                    <input type="text" placeholder="Cidade" required>
+                    <input name="city" type="text" placeholder="Cidade" required>
                     <p class="label"> Estado </p>
                     <select class="address" name="uf" id="uf">
                         <option value="">Selecione</option>
@@ -67,9 +69,12 @@
                         <option value="TO">TO</option>
                      </select>
                     <p class="label"> CEP </p>
-                    <input id="cep" type="text" placeholder="CEP" required>
+                    <input name="cep" id="cep" type="text" placeholder="CEP" required>
                 </div>
-                <button id="subbtt" type="submit"> ENTRAR </button>
+                   <?php if (isset($_SESSION["erro"])): ?>
+                   <h3 style="margin: 30px 0 20px 0;padding-left: 150px;color: rgb(116, 66, 255);" >Erro! Já existe um cliente cadastrado com este CPF!!!</h3>
+                   <?php unset($_SESSION["erro"]); endif; ?>
+                   <button id="subbtt" type="submit"> ENTRAR </button>
             </div>
     </main>
 </body>
