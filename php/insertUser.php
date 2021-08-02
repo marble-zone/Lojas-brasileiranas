@@ -1,13 +1,26 @@
 <?php
 
-include "connection.php";
+require_once "connection.php";
 
-#Muda o INSERT para funcionar com seu banco
-if ($value && isset($_POST['nome'])) {
-        $query = "INSERT INTO pessoa (nome,funcao,salario) VALUES ('{$_POST['nome']}','{$_POST['funcao']}',{$_POST['salario']})";
-        $conn->query($query);
+//Cadastrar novo usuário
+if (isset($_POST['name'])) {
+        $cpf = $_POST['cpf'];
+        $query = "SELECT id_cliente FROM cliente WHERE cpf = '{$cpf}'";
+        $result = $mysqli->query($query);
+
+        if(!$result){
+            $_SESSION["erro"] = true;
+            header("Location: cadastro.php");
+        }
+        else{
+            $cripto = md5($_POST['password']);
+            $query = "INSERT INTO cliente (nome,senha,cpf,email,logradouro,numero,bairro,cidade,estado,cep) 
+                      VALUES ('{$_POST['name']}','{$cripto}','{$cpf}','{$_POST['email']}','{$_POST['logradouro']}',{$_POST['numero']},'{$_POST['bairro']}','{$_POST['city']}','{$_POST['uf']}','{$_POST['cep']}')";
+            $mysqli->query($query);
+            $_SESSION["logado"] = true;
+            header("Location: index.php");
+        }
     }
 
 
-header("Location: index.php");
 ?>
