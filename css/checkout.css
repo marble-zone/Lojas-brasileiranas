@@ -362,11 +362,11 @@ label {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    background: linear-gradient(to right, #9853e7, #b89ae7);
+    background: linear-gradient(to right, #8b42ff, #7769ff);
     cursor: pointer;
 }
 
 #login a:hover {
-    background: linear-gradient(to left, #9853e7, #b189f1);
+    background: linear-gradient(to left, #8b42ff, #7769ff);
     color: white;
 }

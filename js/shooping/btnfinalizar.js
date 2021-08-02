@@ -19,8 +19,7 @@ document.getElementById('address-info').addEventListener('submit', function () {
     let qtdTotal = JSON.parse(sessionStorage.getItem('quantProds'));
     sessionStorage.removeItem('quantProds');
     if (qtdTotal == null) qtdTotal = 0;
-    console.log(qtdTotal);
-    if (sessionStorage.getItem('somaQuant')) {
+    if (JSON.parse(sessionStorage.getItem('products')).length > 0) {
         getAdress();
         height = (85 + 3.13 * qtdTotal);
         //console.log("objectSizeConfirm" + height);

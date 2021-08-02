@@ -133,7 +133,7 @@ footer {
 #divheader {
     display: flex;
     flex-direction: row;
-    gap: 57.7%;
+    gap: 48.3%;
     margin-left: 20px;
 }
 
@@ -153,6 +153,13 @@ footer {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#bemvindo {
+    color: rgb(255, 242, 255);
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: 18px;
 }
 
 #fixed {

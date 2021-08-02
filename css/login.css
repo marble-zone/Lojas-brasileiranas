@@ -29,11 +29,11 @@ main {
     border-bottom: solid;
     border-top-width: 4px;
     border-bottom-width: 4px;
-    border-color: rgb(186, 84, 245);
+    border-color: rgb(190, 121, 255);
     border-radius: 6px 4px 6px 4px;
     padding-bottom: 9px;
     padding-top: 2px;
-    background: linear-gradient(to bottom, rgb(116, 66, 255), rgb(206, 58, 236));
+    background: linear-gradient(to bottom, rgb(175, 90, 255), rgb(190, 121, 255));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

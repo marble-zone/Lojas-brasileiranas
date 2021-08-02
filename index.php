@@ -1,5 +1,14 @@
 <?php
-session_start();
+    session_start();
+
+    if(isset($_SESSION['logado'])){
+        require_once "php/connection.php";
+        $cliente = $_SESSION['logado'];
+        $query = "SELECT nome FROM cliente WHERE id_cliente = '{$cliente}'";
+        $result = $conn->query($query);
+        while($row = $result->fetch_assoc()) $nome = $row['nome'];
+        $nome = explode(' ',$nome,15);
+    }
 ?>
 
 
@@ -24,6 +33,13 @@ session_start();
             <div id="divheader">
                 <h1 id="title"> Lojas Brasileiranas </h1>
                 <nav>
+                    <a href="login.php">
+                        <img src="images/icons/user.png" class="iconheader">
+                    </a>
+                    <?php
+                        if(isset($_SESSION['logado'])) 
+                            echo "<p id='bemvindo'> Bem vindo,<br>{$nome[0]} !</p>"; 
+                    ?>
                     <a href="#home">
                         <option class="iconheader" value="home" onclick="changeContent(this.value)">
                             <!--<img src="images/icon-shop.png">-->
