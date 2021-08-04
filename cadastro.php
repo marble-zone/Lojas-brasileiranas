@@ -15,8 +15,11 @@ session_start();
 <body>
     <main>
         <form action="php/insertUser.php" method="POST">
-            <?php if (isset($_SESSION["erro"])): ?>
+            <?php if (isset($_SESSION["erro1"])): ?>
             <h3 style="margin: 30px 0 20px 0;padding-left: 25%;color: rgb(116, 66, 255);" >Erro! Já existe um cliente cadastrado com este CPF!!!</h3>
+            <?php unset($_SESSION["erro"]); endif; ?>
+            <?php if (isset($_SESSION["erro2"])): ?>
+            <h3 style="margin: 30px 0 20px 0;padding-left: 30%;color: rgb(116, 66, 255);" >Erro! Selecione um Estado válido!!!</h3>
             <?php unset($_SESSION["erro"]); endif; ?>
             <h1> Cadastro </h1>
             <div id="divinputs">

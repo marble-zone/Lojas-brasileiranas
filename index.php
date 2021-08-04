@@ -1,5 +1,15 @@
 <?php
     session_start();
+    
+    if(isset($_SESSION['erro'])){
+        unset($_SESSION['erro']);
+    }
+    if(isset($_SESSION['erro1'])){
+        unset($_SESSION['erro1']);
+    }
+    if(isset($_SESSION['erro2'])){
+        unset($_SESSION['erro2']);
+    }
 
     if(isset($_SESSION['logado'])){
         require_once "php/connection.php";
