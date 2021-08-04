@@ -30,7 +30,7 @@ window.addEventListener("load",function(){
         document.getElementById("cep").innerText = address[5];
         document.getElementById("cidade").innerText = address[6]+" - "+address[7];
 
-        document.getElementById("tempoFrete").innerText = "Sua encomenda chegará em "+ Math.floor(Math.random() * 15 + 1) + " dias! =)"
+        document.getElementById("tempoFrete").innerText = "Sua encomenda chegará em "+ Math.floor(Math.random() * (5 + 1) + 3) + " dias! =)"
 
         for (let i = 0; i < tam; i++) {
             let tr = document.createElement('tr');
