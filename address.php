@@ -61,34 +61,34 @@ if (isset($_SESSION["logado"])) {
             <label for="estado">Estado</label>
             <br>
             <!--<input type="text" name="estado" placeholder="Estado" id="estado" maxlength="20" required>-->
-            <select class="address" name="estado" id="estado" value="<?php echo "".$row["estado"]; ?>" required>
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
+            <select class="address" name="estado" id="estado"  required>
+              <option value="AC" <?=($row["estado"] == 'AC')?'selected':''?> >Acre</option>
+              <option value="AL" <?=($row["estado"] == 'AL')?'selected':''?> >Alagoas</option>
+              <option value="AP" <?=($row["estado"] == 'AP')?'selected':''?> >Amapá</option>
+              <option value="AM" <?=($row["estado"] == 'AM')?'selected':''?> >Amazonas</option>
+              <option value="BA" <?=($row["estado"] == 'BA')?'selected':''?> >Bahia</option>
+              <option value="CE" <?=($row["estado"] == 'CE')?'selected':''?> >Ceará</option>
+              <option value="DF" <?=($row["estado"] == 'DF')?'selected':''?> >Distrito Federal</option>
+              <option value="ES" <?=($row["estado"] == 'ES')?'selected':''?> >Espírito Santo</option>
+              <option value="GO" <?=($row["estado"] == 'GO')?'selected':''?> >Goiás</option>
+              <option value="MA" <?=($row["estado"] == 'MA')?'selected':''?> >Maranhão</option>
+              <option value="MT" <?=($row["estado"] == 'MT')?'selected':''?> >Mato Grosso</option>
+              <option value="MS" <?=($row["estado"] == 'MS')?'selected':''?> >Mato Grosso do Sul</option>
+              <option value="MG" <?=($row["estado"] == 'MG')?'selected':''?> >Minas Gerais</option>
+              <option value="PA" <?=($row["estado"] == 'PA')?'selected':''?> >Pará</option>
+              <option value="PB" <?=($row["estado"] == 'PB')?'selected':''?> >Paraíba</option>
+              <option value="PR" <?=($row["estado"] == 'PR')?'selected':''?> >Paraná</option>
+              <option value="PE" <?=($row["estado"] == 'PE')?'selected':''?> >Pernambuco</option>
+              <option value="PI" <?=($row["estado"] == 'PI')?'selected':''?> >Piauí</option>
+              <option value="RJ" <?=($row["estado"] == 'RJ')?'selected':''?> >Rio de Janeiro</option>
+              <option value="RN" <?=($row["estado"] == 'RN')?'selected':''?> >Rio Grande do Norte</option>
+              <option value="RS" <?=($row["estado"] == 'RS')?'selected':''?> >Rio Grande do Sul</option>
+              <option value="RO" <?=($row["estado"] == 'RO')?'selected':''?> >Rondônia</option>
+              <option value="RR" <?=($row["estado"] == 'RR')?'selected':''?> >Roraima</option>
+              <option value="SC" <?=($row["estado"] == 'SC')?'selected':''?> >Santa Catarina</option>
+              <option value="SP" <?=($row["estado"] == 'SP')?'selected':''?> >São Paulo</option>
+              <option value="SE" <?=($row["estado"] == 'SE')?'selected':''?> >Sergipe</option>
+              <option value="TO" <?=($row["estado"] == 'TO')?'selected':''?> >Tocantins</option>
             </select>
           </div>
         </div>
