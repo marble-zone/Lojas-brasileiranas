@@ -19,7 +19,12 @@ document.getElementById('address-info').addEventListener('submit', function () {
     let qtdTotal = JSON.parse(sessionStorage.getItem('quantProds'));
     sessionStorage.removeItem('quantProds');
     if (qtdTotal == null) qtdTotal = 0;
-    if (JSON.parse(sessionStorage.getItem('products')).length > 0) {
+    let valdicao;
+    if(sessionStorage.getItem('products') == null)
+        valdicao = 0;
+    else valdicao = JSON.parse(sessionStorage.getItem('products')).length; 
+    console.log(valdicao);
+    if (valdicao > 0) {
         getAdress();
         height = (85 + 3.13 * qtdTotal);
         //console.log("objectSizeConfirm" + height);
