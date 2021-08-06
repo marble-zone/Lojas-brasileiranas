@@ -33,21 +33,24 @@ create TABLE produto (
     FOREIGN key (id_cat) references categoria (id_cat)
 );
 
+create TABLE venda (
+    id_venda int not null AUTO_INCREMENT,
+    frete float not null,
+    quantTotal int not null,
+    subtotal float not null,
+    id_cliente int not null,
+    primary key (id_venda),
+    FOREIGN key (id_cliente) references cliente (id_cliente)
+);
+
 create TABLE item (
     id_item int not null AUTO_INCREMENT,
     quant int not null,
     id_produto int not null,
+    id_venda int not null,
     primary key (id_item),
-    FOREIGN key (id_produto) references produto (id_produto)
-);
-
-create TABLE venda (
-    id_venda int not null AUTO_INCREMENT,
-    frete float not null,
-    total float not null,
-    id_cliente int not null,
-    primary key (id_venda),
-    FOREIGN key (id_cliente) references cliente (id_cliente)
+    FOREIGN key (id_produto) references produto (id_produto),
+    FOREIGN key (id_venda) references venda (id_venda)
 );
 
 drop DATABASE lojasbrasileiranas;

@@ -2,11 +2,25 @@ document.getElementById('confirm').addEventListener('click', function(){
     localStorage.setItem('return', JSON.stringify(1));
 });
 
+function salvarRegistros(itens, quantTotal, subtotal, frete){
+    return $.ajax({
+        url: "php/salvarRegistros.php",
+        method: "POST",
+        data: { 'itens': itens, 
+                'quantTotal': quantTotal,
+                'subtotal': subtotal,
+                'frete': frete, }
+      }).done( function(msg){
+          alert(msg);
+      })
+}
+
 window.addEventListener("load",function(){
     if (sessionStorage['products']){
         const util = new UTIL();
         let itens = JSON.parse(sessionStorage.getItem('products'));
         sessionStorage.removeItem('products');
+        let quantTotal = JSON.parse(sessionStorage.getItem('somaQuant'));
         sessionStorage.removeItem('somaQuant');
         let subtotal = JSON.parse(sessionStorage.getItem('somaTotal'));
         sessionStorage.removeItem('somaTotal');
@@ -60,5 +74,6 @@ window.addEventListener("load",function(){
 
             document.getElementById("tbody").appendChild(tr);
         }
+        salvarRegistros(itens, quantTotal, subtotal, frete);
     }
 })
