@@ -137,13 +137,13 @@
 
                         <div class="input">
                             <p class="text-label plabel">Preco mínimo</p>
-                            <input type="number" min="0" max="9999" id="precoMin" name="precoMin" onkeypress='validate(event)'
+                            <input type="number" step="0.01" min="0" max="9999" id="precoMin" name="precoMin" onkeypress='validate(event)'
                                 <?php if(isset($_SESSION['precoMin'])):?> value=<?php echo $_SESSION['precoMin'] ?> <?php endif; ?> >
                         </div>
 
                         <div class="input">
                             <p class="text-label plabel">Preco máximo</p>
-                            <input type="number" min="0" max="9999" id="precoMax" name="precoMax" onkeypress='validate(event)'
+                            <input type="number" step="0.01" min="0" max="9999" id="precoMax" name="precoMax" onkeypress='validate(event)'
                                 <?php if(isset($_SESSION['precoMax'])):?> value=<?php echo $_SESSION['precoMax'] ?> <?php endif; ?> >
                         </div>
 

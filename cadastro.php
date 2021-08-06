@@ -36,7 +36,7 @@ session_start();
                     <p class="label"> Logradouro </p>
                     <input name="logradouro" type="text" placeholder="Rua" required>
                     <p class="label"> Número </p>
-                    <input name="numero" type="number" placeholder="Número do endereço" required>
+                    <input name="numero" type="number" placeholder="Número do endereço" min="0" max="99999" required>
                 </div>
                 <div>
                     <p class="label"> Bairro </p>
