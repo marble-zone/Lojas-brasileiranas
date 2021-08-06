@@ -77,7 +77,7 @@ session_start();
                     <p class="label"> CEP </p>
                     <input name="cep" id="cep" type="text" placeholder="CEP" required>
                 </div>
-                   <button id="subbtt" type="submit"> ENTRAR </button>
+                   <button id="subbtt" type="submit"> CADASTRAR </button>
             </div>
         </form>
     </main>

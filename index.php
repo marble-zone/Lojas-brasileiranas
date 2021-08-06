@@ -43,9 +43,17 @@
             <div id="divheader">
                 <h1 id="title"> Lojas Brasileiranas </h1>
                 <nav>
+                <?php if(!isset($_SESSION['logado'])): ?>
                     <a href="login.php">
                         <img src="images/icons/user.png" class="iconheader">
                     </a>
+                <?php 
+                    else :
+                        echo "<a href='php/logout.php?token=".md5(session_id())."' >
+                            <img src='images/icons/logout.png' class='iconheader'>
+                        </a> ";
+                    endif;
+                 ?>
                     <?php
                         if(isset($_SESSION['logado'])) 
                             echo "<p id='bemvindo'> Bem vindo,<br>{$nome[0]} !</p>"; 
