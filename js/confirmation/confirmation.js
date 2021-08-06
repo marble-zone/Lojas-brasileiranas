@@ -10,8 +10,6 @@ function salvarRegistros(itens, quantTotal, subtotal, frete){
                 'quantTotal': quantTotal,
                 'subtotal': subtotal,
                 'frete': frete, }
-      }).done( function(msg){
-          alert(msg);
       })
 }
 
