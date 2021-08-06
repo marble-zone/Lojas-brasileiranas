@@ -78,78 +78,96 @@
     <aside>
         <div>
             <div>
-                <h3>&#8927; Filtrar por categoria</h3>
 
-                <div class="input">
-                    <input type="checkbox" id="checkAlimento" name="alimento" value='A' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkAlimento">Alimento e bebidas</label>
-                </div>
+                <!-- fazer um form que envia os dados por requisição para serem processados -->
 
-                <div class="input">
-                    <input type="checkbox" id="checkR" name="Roupas" value='R' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkR">Roupas</label>
-                </div>
+                <form action="php/filtro.php" method="post">
 
-                <div class="input">
-                    <input type="checkbox" id="checkM" name="Mobilia" value='M' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkM">Mobília</label>
-                </div>
+                    <div>
+                        <h3>&#8927; Filtrar por categoria</h3>
 
-                <div class="input">
-                    <input type="checkbox" id="checkI" name="Informatica" value='I' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkI">Informática</label>
-                </div>
+                        <div class="input">
+                            <input type="checkbox" id="checkAlimento" name="categ[2]" value='2' 
+                                <?php if(isset($_SESSION['categ'][2])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkAlimento">Alimento e bebidas</label>
+                        </div>
 
-                <div class="input">
-                    <input type="checkbox" id="checkE" name="Eletrodomesticos" value='E' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkE">Eletrodomésticos</label>
-                </div>
+                        <div class="input">
+                            <input type="checkbox" id="checkR" name="categ[6]" value='6'
+                                <?php if(isset($_SESSION['categ'][6])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkR">Roupas</label>
+                        </div>
 
-                <div class="input">
-                    <input type="checkbox" id="checkC" name="Cosmeticos" value='C' onchange="filterCategory(this)">
-                    <label class="plabel" for="checkC">Cosméticos</label>
-                </div>
+                        <div class="input">
+                            <input type="checkbox" id="checkM" name="categ[3]" value='3'
+                                <?php if(isset($_SESSION['categ'][3])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkM">Mobília</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="checkbox" id="checkI" name="categ[5]" value='5'
+                                <?php if(isset($_SESSION['categ'][5])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkI">Informática</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="checkbox" id="checkE" name="categ[4]" value='4'
+                                <?php if(isset($_SESSION['categ'][4])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkE">Eletrodomésticos</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="checkbox" id="checkC" name="categ[1]" value='1'
+                                <?php if(isset($_SESSION['categ'][1])):?> checked <?php endif; ?> >
+                            <label class="plabel" for="checkC">Cosméticos</label>
+                        </div>
+                    </div>
+
+                    <div>
+                    
+                        <h3>&#8927; Filtrar por preço</h3>
+
+                        <div class="input">
+                            <p class="text-label plabel">Preco mínimo</p>
+                            <input type="number" min="0" max="9999" id="precoMin" name="precoMin" onkeypress='validate(event)'
+                                <?php if(isset($_SESSION['precoMin'])):?> value=<?php echo $_SESSION['precoMin'] ?> <?php endif; ?> >
+                        </div>
+
+                        <div class="input">
+                            <p class="text-label plabel">Preco máximo</p>
+                            <input type="number" min="0" max="9999" id="precoMax" name="precoMax" onkeypress='validate(event)'
+                                <?php if(isset($_SESSION['precoMax'])):?> value=<?php echo $_SESSION['precoMax'] ?> <?php endif; ?> >
+                        </div>
+
+                    </div>
+
+                    <div>
+                    
+                        <h3>&#8927; Ordenar por preço</h3>
+                        <div class="input">
+                            <input type="radio" id="ordCres" name="ordem" value="ASC"
+                                <?php if(isset($_SESSION['ordem']) and $_SESSION['ordem'] == "ASC"):?> checked <?php endif; ?> >
+                            <label class="plabel" for="ordCres">Crescente</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" id="ordDecres" name="ordem" value="DESC"
+                            <?php if(isset($_SESSION['ordem']) and $_SESSION['ordem'] == "DESC"):?> checked <?php endif; ?> >
+                            <label class="plabel" for="ordDecres">Decrescente</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" id="ordDesab" name="ordem" value=""
+                            <?php if(isset($_SESSION['ordem']) and $_SESSION['ordem'] == ""):?> checked <?php endif; ?> >
+                            <label class="plabel" for="ordDesab">Desabilitar</label>
+                        </div>
+
+                    </div>
+
+                    <button id="botao-filtrar" type="submit">FILTRAR &#10552;</button>
+                </form>
+
             </div>
-
-            <div>
-                <h3>&#8927; Filtrar por preço</h3>
-
-                <div class="input">
-                    <p class="text-label plabel">Preco mínimo</p>
-                    <input type="number" min="0" max="9999" id="precoMin" onkeypress='validate(event)'>
-                </div>
-
-                <div class="input">
-                    <p class="text-label plabel">Preco máximo</p>
-                    <input type="number" min="0" max="9999" id="precoMax" onkeypress='validate(event)'>
-                </div>
-
-                <!--
-                <div>
-                    <input type="checkbox" id="checkPreco1" name="CheckPreco" value='0 5' onchange="filterPreco(this)">
-                    <label for="checkPreco1">Abaixo de R$5,00</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="checkPreco2" name="CheckPreco" value='5 100' onchange="filterPreco(this)">
-                    <label for="checkPreco2">Entre R$5,00 e 100</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="checkPreco3" name="CheckPreco" value='100 99999' onchange="filterPreco(this)">
-                    <label for="checkPreco3">Acima de 100</label>
-                </div>
-                -->
-            </div>
-
-            <button id="botao-filtrar" onclick="storeValues()">FILTRAR &#10552;</button>
-
-            <!--
-            <div>
-            <input type="checkbox" id="checkAll" name="all" value='all' onchange="filterCategory(this)">
-            <label for="checkAll">All</label>
-            </div>
-            -->
         </div>
         <!--
         <select id="cboCategoria" onchange="filterCategory(this)">

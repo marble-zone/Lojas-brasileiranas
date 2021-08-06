@@ -1,6 +1,45 @@
 <?php
+    session_start();
+
     require_once "php/connection.php";
-    $query = 'SELECT nome,preco,caminho FROM produto;';
+    //$query = 'SELECT nome,preco,caminho FROM produto;';
+    $query = "SELECT nome,preco,caminho FROM produto WHERE";
+    $estaFiltrado = false;
+
+    if(isset($_SESSION['categ']) and !empty($_SESSION['categ']))
+    {
+        $query .= " id_cat IN (".implode(", ", $_SESSION['categ']).")";
+        $estaFiltrado = true;
+    }
+
+    if(isset($_SESSION['precoMin']))
+    {
+        if($estaFiltrado) $query .= " AND";
+
+        $query .= " preco >= {$_SESSION['precoMin']}";
+        $estaFiltrado = true;
+    }
+
+    if(isset($_SESSION['precoMax']))
+    {
+        if($estaFiltrado) $query .= " AND";
+
+        $query .= " preco <= {$_SESSION['precoMax']}";
+        $estaFiltrado = true;
+    }
+
+    if(isset($_SESSION['ordem']) and $_SESSION['ordem'] != "" )
+    {
+        if(!$estaFiltrado) $query = substr($query, 0, -5);
+
+        $query .= " ORDER BY preco {$_SESSION['ordem']}";
+        $estaFiltrado = true;
+    }
+
+    if(!$estaFiltrado) $query = substr($query, 0, -5);
+    $query .= ";";
+    //echo $query;
+
     $result = $conn->query($query);
     $urlBase = "images/products/";
     $ext = ".png";
