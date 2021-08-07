@@ -5,8 +5,8 @@
         $query = "SELECT id_produto FROM produto WHERE ";
         $tam = sizeof($_POST['itens'])-1;
         for($i = 0; $i < $tam; $i++)
-            $query .= "(nome = '{$_POST['itens'][$i][1]}' AND preco = {$_POST['itens'][$i][2]}) OR ";
-        $query .= "(nome = '{$_POST['itens'][$i][1]}' AND preco = {$_POST['itens'][$i][2]})
+            $query .= "(nome = '{$_POST['itens'][$i][1]}' AND ABS(preco-{$_POST['itens'][$i][2]}) <= 0.001) OR ";
+        $query .= "(nome = '{$_POST['itens'][$i][1]}' AND ABS(preco-{$_POST['itens'][$i][2]}) <= 0.001)
                     ORDER BY nome ASC;";
         sort($_POST['itens']);
         $itens = array();
